@@ -1,20 +1,20 @@
 ---
 published: true
-published_date: 11-09-2017
+published_date: 2017-11-09
 
 # SONG
 track:
   title: Sexual Healing
   artist: Marvin Gaye
   album: Midnight Love
-  year: 1982
+  date: 1982-09-30
   genres:
     - post-disco
     - soul
     - funk
-  artwork_URL: https://img.discogs.com/n_v8ZmfQo-WQH-lD5TGKyuh-J8Y=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3493-1378180751-8417.jpeg.jpg
-  discogs_URL: https://www.discogs.com/808-State-Pacific/release/3493
-  spotify_URI: https://open.spotify.com/embed/track/3VZmChrnVW8JK6ano4gSED
+  musicbrains_release_ID: 6a18a35f-b80b-4f43-aa76-ce5e6dc0f918
+  wikipedia_URL: //en.wikipedia.org/wiki/Sexual_Healing
+  spotify_URI: //open.spotify.com/embed/track/3VZmChrnVW8JK6ano4gSED
 
 # ATTRIBUTION
 author:

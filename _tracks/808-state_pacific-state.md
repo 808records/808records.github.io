@@ -1,13 +1,13 @@
 ---
 published: true
-published_date: 11-09-2017
+published_date: 2017-11-09
 
 # SONG
 track:
   title: Pacific State
   artist: 808 State
   album: Quadrastate
-  year: 1989
+  date: 1989-11-21
   genres:
     - electronic
     - house

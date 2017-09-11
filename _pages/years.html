@@ -1,11 +1,30 @@
 ---
+layout: default
 permalink: /
 ---
 
-{% for entry in site.tracks %}
-  <a href="{{ entry.url }}">
-    {{ entry.track.title }}
-    by {{ entry.track.artist }}
-  </a>
-  <br>
+{% for entry in site.tracks  %}
+  {% capture this_year %}{{ entry.track.date | date: "%Y" }}{% endcapture %}
+
+  {% if forloop.first %}
+  <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+  <ul class="entrys">
+  {% else %}
+      {% if this_year != last_year %}
+      </ul>
+      <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+      <ul class="entrys">
+      {% endif %}
+  {% endif %}
+
+    <li>
+      <span class="entry-date">{{ entry.track.date | date_to_string }} — </span>
+      <a href="{{ entry.url }}">{{ entry.title }}</a>
+    </li>
+
+  {% if forloop.last %}
+    </ul>
+  {% endif %}
+
+  {% capture last_year %}{{ this_year }}{% endcapture %}
 {% endfor %}

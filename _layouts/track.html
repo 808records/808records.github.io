@@ -1,22 +1,29 @@
 ---
 layout: default
 ---
+<dl>
+  <dt></dt>
+  <dd>{{ page.track.title }}</dd>
 
-{{ page.track.title }} <br>
-{{ page.track.artist }} <br>
-{{ page.track.album }} <br>
-{{ page.track.year }} <br>
-{{ page.track.genre }} <br>
-{{ page.track.artwork_URL }} <br>
-{{ page.track.discogs_URL }} <br>
+  <dt>Artist</dt>
+  <dd>{{ page.track.artist }}</dd>
 
- <br>
+  <dt>Album</dt>
+  <dd>{{ page.track.album }}</dd>
 
-Submitted by:
-<a href="{{ page.author.social_network.url }}/{{ page.author.social_network.username }}" target="_blank">
-  <img src="https://avatars.io/{{ page.author.social_network.name }}/{{ page.author.social_network.username }}" alt="">
-  {{ page.author.name }}
-</a>
-
+  <dt>Year</dt>
+  <dd>{{ page.track.year }}</dd>
+</dl>
 
 <iframe src="{{ page.track.spotify_URI }}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+
+{{ page.track.musicbrains_release_ID }}
+{{ page.track.spotify_URI }}
+{{ page.track.wikipedia_URL }}
+
+Submitted by:
+<a href="{{ page.author.social_network.url }}/{{ page.author.social_network.username }}" target="_blank" rel="author">
+  <img src="https://avatars.io/{{ page.author.social_network.name }}/{{ page.author.social_network.username }}" alt="">
+  <h4>{{ page.author.name }}</h4>
+</a>
+published <time>{{ page.date | date: "%-d %B %Y"}}</time>
