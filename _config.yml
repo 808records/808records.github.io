@@ -20,6 +20,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+authors:
+  - Matt
+  - Alex
+
 plugins:
   - bourbon
   - neat
@@ -55,4 +59,17 @@ compress_html: # http://jch.penibelst.de/
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# include:
+include:
+  - _pages
+
+collections:
+  tracks:
+    output: true
+    permalink: /tracks/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "tracks"
+    values:
+      layout: "track"

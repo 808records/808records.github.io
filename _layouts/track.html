@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{{ page.track.title }} <br>
+{{ page.track.artist }} <br>
+{{ page.track.album }} <br>
+{{ page.track.year }} <br>
+{{ page.track.genre }} <br>
+{{ page.track.artwork_URL }} <br>
+{{ page.track.discogs_URL }} <br>
+
+ <br>
+
+Submitted by:
+<a href="{{ page.author.social_network.url }}/{{ page.author.social_network.username }}" target="_blank">
+  <img src="https://avatars.io/{{ page.author.social_network.name }}/{{ page.author.social_network.username }}" alt="">
+  {{ page.author.name }}
+</a>
+
+
+<iframe src="{{ page.track.spotify_URI }}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>

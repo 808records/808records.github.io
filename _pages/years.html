@@ -1,0 +1,11 @@
+---
+permalink: /
+---
+
+{% for entry in site.tracks %}
+  <a href="{{ entry.url }}">
+    {{ entry.track.title }}
+    by {{ entry.track.artist }}
+  </a>
+  <br>
+{% endfor %}
