@@ -19,7 +19,7 @@ permalink: /
 
     <li>
       <span class="entry-date">{{ entry.track.date | date_to_string }} — </span>
-      <a href="{{ entry.url }}">{{ entry.title }}</a>
+      <a href="{{ entry.url }}">{{ entry.track.title }} by {{ entry.track.artist }}</a>
     </li>
 
   {% if forloop.last %}
@@ -28,3 +28,8 @@ permalink: /
 
   {% capture last_year %}{{ this_year }}{% endcapture %}
 {% endfor %}
+
+{% assign year_count = 45 %}
+{% assign highest_year_count = 105.0 %}
+
+{{ year_count | times: highest_year_count | divided_by: 100.0 | round: 4 }}
