@@ -1,57 +1,78 @@
 ---
 layout: default
 ---
+<div class="track-page" data-musicbrains_release_id="{{ page.track.appears_on.musicbrains_release_ID }}">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="track-title">{{ page.track.title }}</h1>
+      <h2 class="track-artist">by {{ page.track.artist }}</h2>
 
-<h1>{{ page.track.title }}</h1>
-<h2>by {{ page.track.artist }}</h2>
+      <dl>
+        {% if page.track.appears_on %}
+          {% if page.track.appears_on.album %}
+            <dt>From the Album</dt>
+            <dd>{{ page.track.appears_on.album }}</dd>
 
-<dl>
-  {% if page.track.appears_on %}
-    {% if page.track.appears_on.album %}
-      <dt>Album</dt>
-      <dd>{{ page.track.appears_on.album }}</dd>
-    {% elsif page.track.appears_on.single %}
-      <dt>Single</dt>
-      <dd>{{ page.track.appears_on.album }}</dd>
-    {% endif %}
-  {% endif %}
+          {% elsif page.track.appears_on.ep %}
+            <dt>From the EP</dt>
+            <dd>{{ page.track.appears_on.ep }}</dd>
 
-  <dt>Year</dt>
-  <dd>{{ page.track.date | date: '%Y' }}</dd>
-</dl>
+          {% elsif page.track.appears_on.single %}
+            <dt>From the Single</dt>
+            <dd>{{ page.track.appears_on.single }}</dd>
 
-<iframe src="//open.spotify.com/embed?uri={{ page.track.spotify_URI }}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+          {% endif %}
+        {% endif %}
 
-{{ page.track.musicbrains_release_ID }}
-{{ page.track.spotify_URI }}
-{{ page.track.wikipedia_URL }}
+        <dt>Year</dt>
+        <dd>{{ page.track.date | date: '%Y' }}</dd>
+      </dl>
 
-Submitted by:
+      <iframe src="//open.spotify.com/embed?uri={{ page.track.spotify_track_URI }}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
 
-{% if page.author.name %}
-  {% if page.author.social_network %}
-    {% case page.author.social_network.name %}
-      {% when 'facebook' %}
-        {% assign social_network_path = '//facebook.com/' %}
-      {% when 'twitter' %}
-        {% assign social_network_path = '//twitter.com/' %}
-      {% when 'instagram' %}
-        {% assign social_network_path = '//instagram.com/' %}
-      {% else %}
-        {% assign social_network_path = '#' %}
-    {% endcase %}
+      <div class="source-links">
+        {% if page.track.wikipedia_URL %}
+          <a href="{{ page.track.wikipedia_URL }}">Wikipedia entry</a>
+        {% endif%}
+      </div>
 
-    {% capture social_network_URL %}{{ social_network_path }}{{ page.author.social_network.username }}{% endcapture %}
+      <div class="track-submission-author">
+          <h4>Submitted by:</h4>
 
-    <a href="{{ social_network_URL }}" target="_blank" rel="author">
-      <img src="https://avatars.io/{{ page.author.social_network.name }}/{{ page.author.social_network.username }}" alt="">
-      <h4>{{ page.author.name }}</h4>
-    </a>
-  {% else %}
-    <h4>{{ page.author.name }}</h4>
-  {% endif %}
-{% else %}
-  <h4>Anonymous</h4>
-{% endif %}
+          {% if page.author.name %}
+            {% if page.author.social_network %}
+              {% case page.author.social_network.name %}
+                {% when 'facebook' %}
+                  {% assign social_network_path = '//facebook.com/' %}
+                {% when 'twitter' %}
+                  {% assign social_network_path = '//twitter.com/' %}
+                {% when 'instagram' %}
+                  {% assign social_network_path = '//instagram.com/' %}
+                {% else %}
+                  {% assign social_network_path = '#' %}
+              {% endcase %}
 
-<time>{{ page.date | date: "%-d %B %Y"}}</time>
+              {% capture social_network_URL %}{{ social_network_path }}{{ page.author.social_network.username }}{% endcapture %}
+
+              <a href="{{ social_network_URL }}" target="_blank" rel="author">
+                <img src="https://avatars.io/{{ page.author.social_network.name }}/{{ page.author.social_network.username }}" alt="">
+                <h3>{{ page.author.name }}</h3>
+              </a>
+            {% else %}
+              <h4>{{ page.author.name }}</h4>
+            {% endif %}
+          {% else %}
+            <h4>Anonymous</h4>
+          {% endif %}
+
+          <time>{{ page.date | date: "%-d %B %Y"}}</time>
+        </div>
+
+    </div>
+
+    <div class="col-md-12">
+      <div class="track-release-artwork" data-release-artwork></div>
+    </div>
+  </div>
+
+</div>

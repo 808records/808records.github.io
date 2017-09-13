@@ -8,14 +8,14 @@ track:
   artist: 808 State
   appears_on:
     album: Quadrastate
+    musicbrains_release_ID: 58d9573b-a19e-469b-b673-ef527816673e
   date: 1989-11-2
   genres:
     - electronic
     - house
     - techno
-  musicbrains_release_ID: 58d9573b-a19e-469b-b673-ef527816673e
   wikipedia_URL: //en.wikipedia.org/wiki/Pacific_State_(song)
-  spotify_URI: spotify:track:3t9dq1I2VKPmEcatwRkJ9P
+  spotify_track_URI: spotify:track:3t9dq1I2VKPmEcatwRkJ9P
 
 # ATTRIBUTION
 author:

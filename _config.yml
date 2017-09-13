@@ -13,6 +13,27 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+plugins:
+  - bourbon
+  - neat
+  - jekyll-feed
+
+include:
+  - _pages
+
 title: 808 States
 description: > # this means to ignore newlines until "baseurl:"
   A collaborative interactive site that documents the extensive popularity
@@ -21,13 +42,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 authors:
-  - Matt
-  - Alex
-
-plugins:
-  - bourbon
-  - neat
-  - jekyll-feed
+  - Matt Grey
+  - Alex Winter
 
 # Build settings
 markdown: kramdown
@@ -47,20 +63,8 @@ compress_html: # http://jch.penibelst.de/
   #ignore:
   #envs: [local]
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-include:
-  - _pages
+# Default permalink style for all pages
+permalink: /:title/
 
 collections:
   tracks:

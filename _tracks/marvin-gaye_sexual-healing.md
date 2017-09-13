@@ -8,14 +8,14 @@ track:
   artist: Marvin Gaye
   appears_on:
     album: Midnight Love
+    musicbrains_release_ID: 6a18a35f-b80b-4f43-aa76-ce5e6dc0f918
   date: 1982-09-30
   genres:
     - post-disco
     - soul
     - funk
-  musicbrains_release_ID: 6a18a35f-b80b-4f43-aa76-ce5e6dc0f918
   wikipedia_URL: //en.wikipedia.org/wiki/Sexual_Healing
-  spotify_URI: spotify:track:3VZmChrnVW8JK6ano4gSED
+  spotify_track_URI: spotify:track:3VZmChrnVW8JK6ano4gSED
 
 # ATTRIBUTION
 author:

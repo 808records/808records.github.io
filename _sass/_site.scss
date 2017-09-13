@@ -1,1 +1,15 @@
-html { font-family: Rubik, sans-serif; }
+html {
+  font-family: Rubik, sans-serif;
+  background: $site-background-color;
+  color: $site-text-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
