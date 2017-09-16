@@ -8,7 +8,7 @@ track:
   artist: 808 State
   appears_on:
     album: Quadrastate
-    musicbrains_release_ID: 58d9573b-a19e-469b-b673-ef527816673e
+    discogs_release_ID: 3554
   date: 1989-11-2
   genres:
     - electronic
