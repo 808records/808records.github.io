@@ -1,6 +1,13 @@
 .track-page {
-  .track-title {}
-  .track-artist {}
+  .track-title {
+    font-size: 2.4rem;
+    margin-bottom: 4px;
+  }
+
+  .track-artist {
+    font-size: 1.8rem;
+    opacity: .3;
+  }
   .track-release-artwork {
     display: block;
     width: 100%;

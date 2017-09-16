@@ -3,9 +3,14 @@ layout: default
 ---
 <div class="track-page" data-musicbrains_release_id="{{ page.track.appears_on.musicbrains_release_ID }}">
   <div class="row">
-    <div class="col-md-12">
+
+    <div class="col-md-12 col-md-push-12">
+      <div class="track-release-artwork" data-release-artwork></div>
+    </div>
+
+    <div class="col-md-12 col-md-pull-12">
       <h1 class="track-title">{{ page.track.title }}</h1>
-      <h2 class="track-artist">by {{ page.track.artist }}</h2>
+      <h2 class="track-artist">{{ page.track.artist }}</h2>
 
       <dl>
         {% if page.track.appears_on %}
@@ -36,8 +41,8 @@ layout: default
         {% endif%}
       </div>
 
-      <div class="track-submission-author">
-          <h4>Submitted by:</h4>
+      <div>
+          <h4 class="subtitle-label">Submitted by:</h4>
 
           {% if page.author.name %}
             {% if page.author.social_network %}
@@ -47,16 +52,16 @@ layout: default
                 {% when 'twitter' %}
                   {% assign social_network_path = '//twitter.com/' %}
                 {% when 'instagram' %}
-                  {% assign social_network_path = '//instagram.com/' %}
-                {% else %}
+                    {% assign social_network_path = '//instagram.com/' %}
+                  {% else %}
                   {% assign social_network_path = '#' %}
               {% endcase %}
 
               {% capture social_network_URL %}{{ social_network_path }}{{ page.author.social_network.username }}{% endcapture %}
 
-              <a href="{{ social_network_URL }}" target="_blank" rel="author">
-                <img src="https://avatars.io/{{ page.author.social_network.name }}/{{ page.author.social_network.username }}" alt="">
-                <h3>{{ page.author.name }}</h3>
+              <a class="track-submission-author" href="{{ social_network_URL }}" target="_blank" rel="author">
+                <img class="track-submission-author__image" src="https://avatars.io/{{ page.author.social_network.name }}/{{ page.author.social_network.username }}" alt="">
+                <h3 class="track-submission-author__name">{{ page.author.name }}</h3>
               </a>
             {% else %}
               <h4>{{ page.author.name }}</h4>
@@ -67,12 +72,6 @@ layout: default
 
           <time>{{ page.date | date: "%-d %B %Y"}}</time>
         </div>
-
-    </div>
-
-    <div class="col-md-12">
-      <div class="track-release-artwork" data-release-artwork></div>
     </div>
   </div>
-
 </div>
