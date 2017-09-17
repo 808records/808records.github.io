@@ -1,0 +1,38 @@
+---
+published: true
+published_date: 2017-11-17
+date: 1982-12-31
+
+# SONG
+track:
+  title: Raga Bhairav
+  artist: Charanjit Singh
+  appears_on:
+    album: "Synthesizing: Ten Ragas to a Disco Beat"
+    discogs_release_ID: 7455108
+  genres:
+    - Disco
+    - Electronic
+    - Indian Classical
+    - Acid
+    - Folk, World, & Country
+  wikipedia_URL: //www.wikiwand.com/en/Charanjit_Singh_(musician)#/Synthesizing:_Ten_Ragas_to_a_Disco_Beat
+  spotify_track_URI: spotify:track:39z2JJBCV7dIS7w7tuadGM
+
+tags:
+  - one
+  - two
+  - three
+
+categories:
+  - four
+  - five
+  - six
+
+# ATTRIBUTION
+author:
+  name: Matt Grey
+  social_network:
+    name: twitter
+    username: 'mattgreydesign'
+---

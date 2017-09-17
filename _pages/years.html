@@ -3,30 +3,27 @@ layout: default
 permalink: /
 ---
 
-{% for entry in site.tracks  %}
-  {% capture this_year %}{{ entry.track.date | date: "%Y" }}{% endcapture %}
-
-  {% if forloop.first %}
-  <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
-  <ul class="entrys">
-  {% else %}
-      {% if this_year != last_year %}
-      </ul>
-      <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
-      <ul class="entrys">
-      {% endif %}
+{% for track-item in site.tracks %}
+  {% capture currentyear %}{{track-item.date | date: "%Y"}}{% endcapture %}
+  {% if currentyear != year %}
+     <h2>{{ currentyear }}</h2>
+    {% capture year %}{{currentyear}}{% endcapture %}
   {% endif %}
+  <ul class="track-items-in-year">
+    <li><a href="{{ track-item.url | prepend: site.baseurl }}">{{ track-item.track.title }} — {{ track-item.track.artist }}</a></li>
+  </ul>
+{% endfor %}
 
-    <li>
-      <span class="entry-date">{{ entry.track.date | date_to_string }} — </span>
-      <a href="{{ entry.url }}">{{ entry.track.title }} by {{ entry.track.artist }}</a>
-    </li>
-
-  {% if forloop.last %}
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+    {% for posts in category %}
+      {% for post in posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    {% endfor %}
     </ul>
-  {% endif %}
-
-  {% capture last_year %}{{ this_year }}{% endcapture %}
+  </li>
 {% endfor %}
 
 {% assign year_count = 45 %}
