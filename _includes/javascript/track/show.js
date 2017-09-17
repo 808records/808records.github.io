@@ -13,7 +13,7 @@
       },
       dataType: 'json',
       beforeSend: function () {
-        releaseArtwork.attr('src', 'https://i.pinimg.com/originals/4d/79/e4/4d79e45299ba276f530cbda84f5eca05.gif');
+        releaseArtwork.attr('src', 'https://media.giphy.com/media/3oEhmM10mIi1dkMfmg/giphy.gif');
       },
       success: function (res) {
         var images;

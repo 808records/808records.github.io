@@ -8,13 +8,33 @@
     font-size: 1.8rem;
     opacity: .3;
   }
+
   .track-release-artwork {
     display: block;
     width: 100%;
     padding-bottom: 100%;
     background: black;
+    box-shadow: 0px 0px 47px 0px rgba(0,0,0,0.5);
   }
+
+  .track-release-artwork__image-wrapper {
+    position: absolute;
+    top: 0;
+    right: $grid-gutter-width;
+    bottom: 0;
+    left: $grid-gutter-width;
+  }
+
+  .track-release-artwork__image {
+    width: 100%;
+    height: auto;
+  }
+
   .track-submission-author {
     background: black;
+  }
+
+  .track-submission-author__image {
+    width: 64px;
   }
 }
