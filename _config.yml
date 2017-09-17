@@ -77,3 +77,11 @@ defaults:
       type: "tracks"
     values:
       layout: "track"
+
+navigation:
+  - title: Browse
+    url: /
+  - title: About
+    url: /about
+  - title: Submit
+    url: /submit
