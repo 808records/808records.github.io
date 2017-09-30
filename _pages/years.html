@@ -15,22 +15,30 @@ permalink: /
     </ul>
 {% endfor %}
 
-{{ posts_by_year.size }} years in total
+{{ site.posts.size }} years in total
 
 
 
+{% capture highest_year_count %}
+  {% assign posts_by_year = posts_by_year | sort: 'size' %}
+
+  {% for year in posts_by_year %}
+    {% if forloop.last == true %}
+      {{ year.size | append: '.0' }}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
 
 <div style="height: 300px">
   {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
   {% for year in posts_by_year %}
 
-  {% assign number_of_tracks_in_year = year.size %}
-  {% assign highest_year_count = 4 %}
-  {% capture year_percentage %}{{ number_of_tracks_in_year | times: 10 | divided_by: highest_year_count | times: 10 }}{% endcapture %}
+    {% assign number_of_tracks_in_year = year.size | times: 10 %}
+    {% capture year_percentage %}{{ number_of_tracks_in_year | divided_by: highest_year_count | times: 10 }}{% endcapture %}
 
-  <div style="float: left; background: red; min-height: 10px; margin-right: 2px; height: {{ year_percentage }}% ">
-    {{ year.name }} {{ year.size }}
-  </div>
+    <div style="float: left; background: red; min-height: 10px; margin-right: 2px; height: {{ year_percentage }}% ">
+      {{ year.name }} {{ year.size }}
+    </div>
 
   {% endfor %}
 </div>
