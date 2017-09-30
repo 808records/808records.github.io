@@ -1,0 +1,26 @@
+---
+layout: default
+permalink: /artists/
+published: false
+---
+
+{% for post in site.posts  %}
+  {% capture this_artist %}{{ post.track.artist }}{% endcapture %}
+  {% capture next_artist %}{{ post.previous.track.artist }}{% endcapture %}
+
+  {% if forloop.first %}
+    <h2>{{ this_artist }}</h2>
+    <ul>
+  {% endif %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% if forloop.last %}
+    </ul>
+  {% else %}
+    {% if this_artist != next_artist %}
+    </ul>
+
+    <h2>{{next_artist}}</h2>
+    <ul>
+    {% endif %}
+  {% endif %}
+{% endfor %}

@@ -5,29 +5,32 @@ permalink: /
 
 <a href="/genres">Genres</a>
 
-{% for post in site.posts  %}
-  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-  {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-
-  {% if forloop.first %}
-  <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
-  <ul>
-  {% endif %}
-
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-
-  {% if forloop.last %}
-  </ul>
-  {% else %}
-    {% if this_year != next_year %}
-    </ul>
-    <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+{% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% for year in posts_by_year %}
+  <h3>{{ year.name }} ({{ year.size }})</h3>
     <ul>
-    {% endif %}
-  {% endif %}
+      {% for post in year.items %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
 {% endfor %}
 
-{% assign year_count = 45 %}
-{% assign highest_year_count = 105.0 %}
+{{ posts_by_year.size }} years in total
 
-{{ year_count | times: highest_year_count | divided_by: 100.0 | round: 4 }}
+
+
+
+<div style="height: 300px">
+  {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+  {% for year in posts_by_year %}
+
+  {% assign number_of_tracks_in_year = year.size %}
+  {% assign highest_year_count = 4 %}
+  {% capture year_percentage %}{{ number_of_tracks_in_year | times: 10 | divided_by: highest_year_count | times: 10 }}{% endcapture %}
+
+  <div style="float: left; background: red; min-height: 10px; margin-right: 2px; height: {{ year_percentage }}% ">
+    {{ year.name }} {{ year.size }}
+  </div>
+
+  {% endfor %}
+</div>

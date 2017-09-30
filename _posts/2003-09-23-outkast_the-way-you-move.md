@@ -7,7 +7,7 @@ track:
   title: The Way You Move
   artist: OutKast
   appears_on:
-    album: Midnight Love
+    album: Speakerboxxx / The Love Below
     discogs_release_ID: 218471
   wikipedia_URL: //en.wikipedia.org/wiki/Speakerboxxx/The_Love_Below
   spotify_track_URI: spotify:track:2XToPn7jnxPGL8EpQucj5I

@@ -6,6 +6,6 @@ layout: default
 
 {% capture this_genre %}{{ page.title }}{% endcapture %}
 
-{% for this in site.categories[this_genre] %}
-  <li>{{this.title}}</li>
+{% for genre in site.categories[this_genre] %}
+  <li>{{ genre.track.title }}</li>
 {% endfor %}

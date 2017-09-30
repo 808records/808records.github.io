@@ -84,7 +84,7 @@ defaults:
       permalink: /genres/:title/
 
 navigation:
-  - title: Browse
+  - title: Explore
     url: /
   - title: About
     url: /about
