@@ -15,10 +15,6 @@ permalink: /
     </ul>
 {% endfor %}
 
-{{ site.posts.size }} years in total
-
-
-
 {% capture highest_year_count %}
   {% assign posts_by_year = posts_by_year | sort: 'size' %}
 
@@ -28,6 +24,8 @@ permalink: /
     {% endif %}
   {% endfor %}
 {% endcapture %}
+
+{{ site.posts.size }} tracks in total
 
 <div style="height: 300px">
   {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
