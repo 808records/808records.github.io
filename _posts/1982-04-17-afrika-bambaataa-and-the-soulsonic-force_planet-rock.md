@@ -1,7 +1,6 @@
 ---
 published: true
 published_date: 2017-11-17
-date: 1982-04-17
 
 # SONG
 track:
@@ -10,12 +9,12 @@ track:
   appears_on:
     single: Planet Rock
     discogs_release_ID: 2047
-  genres:
-    - Hip Hop
-    - Electronic
-    - Electro
   wikipedia_URL: //en.wikipedia.org/wiki/Planet_Rock_(song)
   spotify_track_URI: spotify:track:5ZSDLOVEhZlvqcI6ELAT44
+
+categories:
+  - Hip Hop
+  - Electro
 
 # ATTRIBUTION
 author:

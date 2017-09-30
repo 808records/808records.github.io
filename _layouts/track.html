@@ -6,9 +6,7 @@ layout: default
 
     <div class="col-sm-10 col-sm-offset-2 col-sm-push-12">
       <div class="track-release-artwork">
-        <div class="track-release-artwork__image-wrapper">
-          <img class="track-release-artwork__image" data-release-artwork>
-        </div>
+        <img class="track-release-artwork__image" data-release-artwork>
       </div>
     </div>
 
@@ -34,8 +32,14 @@ layout: default
         {% endif %}
 
         <dt>Year</dt>
-        <dd>{{ page.track.date | date: '%Y' }}</dd>
+        <dd>{{ page.date | date: '%Y' }}</dd>
       </dl>
+      <ul>
+        Genre{% if page.categories.size > 1 %}s{% endif %}
+        {% for genre in page.categories %}
+          <li><a href="/genres/{{ genre | slugify }}">{{ genre }}</a></li>
+        {% endfor %}
+      </ul>
 
       <iframe src="//open.spotify.com/embed?uri={{ page.track.spotify_track_URI }}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
 
@@ -74,7 +78,7 @@ layout: default
           <h4>Anonymous</h4>
         {% endif %}
 
-        <time>{{ page.date | date: "%-d %B %Y"}}</time>
+        <time>{{ page.published_date | date: "%-d %B %Y"}}</time>
       </div>
     </div>
   </div>

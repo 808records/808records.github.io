@@ -1,0 +1,10 @@
+---
+layout: default
+permalink: /genres/
+---
+
+<ul>
+{% for genre in site.genres  %}
+  <li><a href="{{ genre.slug }}">{{ genre.title }}</a></li>
+{% endfor %}
+<ul>

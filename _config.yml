@@ -63,20 +63,25 @@ compress_html: # http://jch.penibelst.de/
   #ignore:
   #envs: [local]
 
-# Default permalink style for all pages
 permalink: /:title/
 
 collections:
-  tracks:
+  genres:
     output: true
-    permalink: /tracks/:path/
 
 defaults:
   - scope:
       path: ""
-      type: "tracks"
+      type: "posts"
     values:
       layout: "track"
+      permalink: /tracks/:title/
+  - scope:
+      path: ""
+      type: genres
+    values:
+      layout: genre
+      permalink: /genres/:title/
 
 navigation:
   - title: Browse

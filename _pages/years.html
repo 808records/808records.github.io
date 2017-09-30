@@ -3,27 +3,28 @@ layout: default
 permalink: /
 ---
 
-{% for track-item in site.tracks %}
-  {% capture currentyear %}{{track-item.date | date: "%Y"}}{% endcapture %}
-  {% if currentyear != year %}
-     <h2>{{ currentyear }}</h2>
-    {% capture year %}{{currentyear}}{% endcapture %}
-  {% endif %}
-  <ul class="track-items-in-year">
-    <li><a href="{{ track-item.url | prepend: site.baseurl }}">{{ track-item.track.title }} — {{ track-item.track.artist }}</a></li>
-  </ul>
-{% endfor %}
+<a href="/genres">Genres</a>
 
-{% for category in site.categories %}
-  <li><a name="{{ category | first }}">{{ category | first }}</a>
-    <ul>
-    {% for posts in category %}
-      {% for post in posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    {% endfor %}
+{% for post in site.posts  %}
+  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+  {% if forloop.first %}
+  <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+  <ul>
+  {% endif %}
+
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+
+  {% if forloop.last %}
+  </ul>
+  {% else %}
+    {% if this_year != next_year %}
     </ul>
-  </li>
+    <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+    <ul>
+    {% endif %}
+  {% endif %}
 {% endfor %}
 
 {% assign year_count = 45 %}
