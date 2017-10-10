@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h3>Author</h3>
+<h1>{{ page.name }}</h1>
+
+{% capture this_author %}{{ page.slug }}{% endcapture %}
+{% assign tracks = site.posts | where: "author", this_author %}
+
+{% for track in tracks %}
+  <li><a href="/tracks/{{ track.slug }}">{{ track.title }}</a></li>
+{% endfor %}

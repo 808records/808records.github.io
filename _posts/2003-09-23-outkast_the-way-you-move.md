@@ -13,17 +13,13 @@ track:
   spotify_track_URI: spotify:track:2XToPn7jnxPGL8EpQucj5I
 
 additional_info: |
-  The 808 is mentioned in the lyrics
+  The 808 is mentioned in the [lyrics](https://genius.com/186485)
 
 categories:
-  - Hip Hop
+  - Hip hop
   - Soul
   - Crunk
 
 # ATTRIBUTION
-author:
-  name: Matt Grey
-  social_network:
-    name: twitter
-    username: 'mattgreydesign'
+author: matt-grey
 ---

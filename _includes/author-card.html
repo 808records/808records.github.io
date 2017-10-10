@@ -1,0 +1,37 @@
+{% capture this_author %}{{ include.card_author }}{% endcapture %}
+
+<ul>
+{% for author in site.authors %}
+  {% if author.slug == this_author %}
+
+    {% if author.name %}
+      {% if author.social_network %}
+        {% case author.social_network.name %}
+          {% when 'facebook' %}
+            {% assign social_network_path = '//facebook.com/' %}
+          {% when 'twitter' %}
+            {% assign social_network_path = '//twitter.com/' %}
+          {% when 'instagram' %}
+            {% assign social_network_path = '//instagram.com/' %}
+          {% else %}
+            {% assign social_network_path = '#' %}
+        {% endcase %}
+
+        <a class="track-submission-author" href="/authors/{{ author.slug }}" rel="author">
+          <img class="track-submission-author__image" src="https://avatars.io/{{ author.social_network.name }}/{{ author.social_network.username }}" alt="">
+          <h3 class="track-submission-author__name">{{ author.name }}</h3>
+        </a>
+      {% else %}
+        <a class="track-submission-author" href="/authors/{{ author.slug }}" rel="author">
+          <h3>{{ author.name }}</h3>
+        </a>
+      {% endif %}
+    {% else %}
+      <div class="track-submission-author" rel="author">
+        <h3>Anonymous</h3>
+      </div>
+    {% endif %}
+
+  {% endif %}
+{% endfor %}
+<ul>

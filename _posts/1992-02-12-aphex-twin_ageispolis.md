@@ -1,6 +1,6 @@
 ---
 published: true
-published_date: 2017-11-17
+published_date: 2017-09-17
 
 # SONG
 track:
@@ -17,9 +17,5 @@ categories:
   - IDM
 
 # ATTRIBUTION
-author:
-  name: Matt Grey
-  social_network:
-    name: twitter
-    username: 'mattgreydesign'
+author: matt-grey
 ---

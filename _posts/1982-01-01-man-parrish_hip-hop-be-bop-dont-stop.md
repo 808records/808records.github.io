@@ -13,13 +13,9 @@ track:
   spotify_track_URI: spotify:track:16PGuHoUos815gxJBBUf5c
 
 categories:
-  - Hip Hop
+  - Hip hop
   - Electro
 
 # ATTRIBUTION
-author:
-  name: Matt Grey
-  social_network:
-    name: twitter
-    username: 'mattgreydesign'
+author: matt-grey
 ---

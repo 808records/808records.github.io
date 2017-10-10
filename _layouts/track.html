@@ -17,7 +17,7 @@ layout: default
       <dl>
         {% if page.track.appears_on %}
           {% if page.track.appears_on.album %}
-            <dt>From the Album</dt>
+            <dt>From the album</dt>
             <dd>{{ page.track.appears_on.album }}</dd>
 
           {% elsif page.track.appears_on.ep %}
@@ -25,9 +25,12 @@ layout: default
             <dd>{{ page.track.appears_on.ep }}</dd>
 
           {% elsif page.track.appears_on.single %}
-            <dt>From the Single</dt>
+            <dt>From the single</dt>
             <dd>{{ page.track.appears_on.single }}</dd>
 
+          {% elsif page.track.appears_on.compilation %}
+            <dt>From the compilation</dt>
+            <dd>{{ page.track.appears_on.compilation }}</dd>
           {% endif %}
         {% endif %}
 
@@ -44,39 +47,19 @@ layout: default
       <iframe src="//open.spotify.com/embed?uri={{ page.track.spotify_track_URI }}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
 
       <div class="source-links">
+        {% if page.additional_info %}
+          {{ page.additional_info | markdownify }}
+        {% endif %}
         {% if page.track.wikipedia_URL %}
           <a href="{{ page.track.wikipedia_URL }}">Wikipedia entry</a>
+        {% elsif page.track.source_URL %}
+          <a href="{{ page.track.source_URL }}">Source</a>
         {% endif %}
       </div>
 
       <div>
         <h4 class="subtitle-label">Submitted by</h4>
-
-        {% if page.author.name %}
-          {% if page.author.social_network %}
-            {% case page.author.social_network.name %}
-              {% when 'facebook' %}
-                {% assign social_network_path = '//facebook.com/' %}
-              {% when 'twitter' %}
-                {% assign social_network_path = '//twitter.com/' %}
-              {% when 'instagram' %}
-                  {% assign social_network_path = '//instagram.com/' %}
-                {% else %}
-                {% assign social_network_path = '#' %}
-            {% endcase %}
-
-            {% capture social_network_URL %}{{ social_network_path }}{{ page.author.social_network.username }}{% endcapture %}
-
-            <a class="track-submission-author" href="{{ social_network_URL }}" target="_blank" rel="author">
-              <img class="track-submission-author__image" src="https://avatars.io/{{ page.author.social_network.name }}/{{ page.author.social_network.username }}" alt="">
-              <h3 class="track-submission-author__name">{{ page.author.name }}</h3>
-            </a>
-          {% else %}
-            <h4>{{ page.author.name }}</h4>
-          {% endif %}
-        {% else %}
-          <h4>Anonymous</h4>
-        {% endif %}
+        {% include author-card.html card_author=page.author %}
 
         <time>{{ page.published_date | date: "%-d %B %Y"}}</time>
       </div>

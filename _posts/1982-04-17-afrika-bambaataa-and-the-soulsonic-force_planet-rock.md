@@ -1,6 +1,6 @@
 ---
 published: true
-published_date: 2017-11-17
+published_date: 2017-09-17
 
 # SONG
 track:
@@ -13,13 +13,9 @@ track:
   spotify_track_URI: spotify:track:5ZSDLOVEhZlvqcI6ELAT44
 
 categories:
-  - Hip Hop
+  - Hip hop
   - Electro
 
 # ATTRIBUTION
-author:
-  name: Matt Grey
-  social_network:
-    name: twitter
-    username: 'mattgreydesign'
+author: matt-grey
 ---

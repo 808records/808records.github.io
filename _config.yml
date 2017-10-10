@@ -68,6 +68,8 @@ permalink: /:title/
 collections:
   genres:
     output: true
+  authors:
+    output: true
 
 defaults:
   - scope:
@@ -82,6 +84,12 @@ defaults:
     values:
       layout: genre
       permalink: /genres/:title/
+  - scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
+      permalink: /authors/:title/
 
 navigation:
   - title: Explore

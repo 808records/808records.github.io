@@ -1,6 +1,6 @@
 ---
 published: true
-published_date: 2017-11-09
+published_date: 2017-09-11
 
 # SONG
 track:
@@ -18,9 +18,5 @@ categories:
   - Funk
 
 # ATTRIBUTION
-author:
-  name: Alex Winter
-  social_network:
-    name: facebook
-    username: 'alexcoldwinter'
+author: alex-winter
 ---
