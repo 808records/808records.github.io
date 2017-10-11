@@ -16,7 +16,7 @@ categories:
   - Disco
   - Indian Classical
   - Acid
-  - Folk, World, & Country
+  - Folk, World, and Country
 
 # ATTRIBUTION
 author: matt-grey

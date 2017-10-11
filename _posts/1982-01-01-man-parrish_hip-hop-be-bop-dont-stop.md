@@ -1,6 +1,6 @@
 ---
 published: true
-published_date: 2017-09-29 14:26:58
+published_date: 2017-09-29
 
 # SONG
 track:

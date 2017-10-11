@@ -1,3 +1,0 @@
----
-title: Hip hop
----

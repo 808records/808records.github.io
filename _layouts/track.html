@@ -40,7 +40,7 @@ layout: default
         {% endif %}
 
         <dt>Year</dt>
-        <dd>{{ page.date | date: '%Y' }}</dd>
+        <dd><a href="/years/{{ page.date | date: '%Y' }}">{{ page.date | date: '%Y' }}</a></dd>
       </dl>
       <ul>
         Genre{% if page.categories.size > 1 %}s{% endif %}

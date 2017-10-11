@@ -1,3 +1,0 @@
----
-title: Trip hop
----

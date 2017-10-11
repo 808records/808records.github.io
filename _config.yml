@@ -98,6 +98,10 @@ page_gen:
     template: 'year'
     name: 'year'
     dir: 'years'
+  - data: 'genres'
+    template: 'genre'
+    name: 'genre'
+    dir: 'genres'
 
 navigation:
   - title: Explore

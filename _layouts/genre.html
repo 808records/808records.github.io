@@ -4,8 +4,8 @@ layout: default
 <h3>Genre</h3>
 <h1>{{ page.title }}</h1>
 
-{% assign this_genre = page.title %}
+{% assign this_genre = page.genre %}
 
-{% for genre in site.categories[this_genre] %}
-  <li>{{ genre.track.title }} — {{ genre.track.artist }}</li>
+{% for track_entity in site.categories[this_genre] %}
+  <li><a href="{{ track_entity.url }}">{{ track_entity.track.title }} — {{ track_entity.track.artist }}</a></li>
 {% endfor %}

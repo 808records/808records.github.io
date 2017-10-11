@@ -12,9 +12,8 @@ pagination:
     -->
   {% for post in paginator.posts %}
   <li>
-    <span class="post-meta">Posted {{ post.date | date: "%b %-d, %Y" }}, released {{ post.release_date | date: "%b %-d, %Y" }}</span>
     <h2>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> - <span class="post-meta">Posted {{ post.published_date | date: "%b %-d, %Y" }} released: {{ post.date | date: "%b %-d, %Y" }}</span>
     </h2>
   </li>
   {% endfor %}
