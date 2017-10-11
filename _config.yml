@@ -91,6 +91,13 @@ defaults:
       layout: author
       permalink: /authors/:title/
 
+page_gen-dirs: true # uncomment, if you prefer to generate named folders
+page_gen:
+  - data: 'years'
+    template: 'year'
+    name: 'year'
+    dir: 'years'
+
 navigation:
   - title: Explore
     url: /

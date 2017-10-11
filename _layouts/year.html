@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{{ page.year }}
+
+
+{% assign this_year = page.year %}
+{% assign tracks = site.posts | where: "date", this_year  %}
+
+{% for track in tracks %}
+  <li><a href="/tracks/{{ track.slug }}">{{ track.title }} – {{ track.date | date: "%-d %B" }}</a></li>
+{% endfor %}

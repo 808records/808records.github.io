@@ -2,6 +2,11 @@
 layout: default
 permalink: /years/
 ---
+<ul>
+  {% for year_entity in site.data.years %}
+    <li><a href="/years/{{ year_entity.year }}">{{ year_entity.year }}</a></li>
+  {% endfor %}
+</ul>
 
 <a href="/genres">Genres</a>
 
