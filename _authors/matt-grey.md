@@ -1,5 +1,4 @@
 ---
-username: mattgrey
 name: Matt Grey
 
 social_network:

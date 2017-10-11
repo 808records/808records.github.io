@@ -4,8 +4,8 @@ layout: default
 <h3>Genre</h3>
 <h1>{{ page.title }}</h1>
 
-{% capture this_genre %}{{ page.title }}{% endcapture %}
+{% assign this_genre = page.title %}
 
 {% for genre in site.categories[this_genre] %}
-  <li>{{ genre.track.title }}</li>
+  <li>{{ genre.track.title }} — {{ genre.track.artist }}</li>
 {% endfor %}

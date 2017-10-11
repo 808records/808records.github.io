@@ -12,13 +12,14 @@ track:
   wikipedia_URL: //en.wikipedia.org/wiki/Speakerboxxx/The_Love_Below
   spotify_track_URI: spotify:track:2XToPn7jnxPGL8EpQucj5I
 
-additional_info: |
-  The 808 is mentioned in the [lyrics](https://genius.com/186485)
-
 categories:
   - Hip hop
   - Soul
   - Crunk
+
+additional_info: |
+  The 808 is mentioned in the [lyrics](//genius.com/186485)
+
 
 # ATTRIBUTION
 author: matt-grey

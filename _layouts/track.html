@@ -31,6 +31,11 @@ layout: default
           {% elsif page.track.appears_on.compilation %}
             <dt>From the compilation</dt>
             <dd>{{ page.track.appears_on.compilation }}</dd>
+
+          {% elsif page.track.appears_on.soundtrack %}
+            <dt>From the soundtrack</dt>
+            <dd>{{ page.track.appears_on.soundtrack }}</dd>
+
           {% endif %}
         {% endif %}
 

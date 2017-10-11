@@ -12,16 +12,16 @@ track:
   wikipedia_URL: //en.wikipedia.org/wiki/Analogue_Bubblebath_Vol_I
   spotify_track_URI: spotify:track:3EhTOTAvNAUgY6AIurVxT1
 
-additional_info: |
-  Reputedly first put together by Richard D. James at age 17 and recorded around
-  1987, Analogue Bubblebath was first released under artist name
-  "The Aphex Twin" in 1991
-
 categories:
   - Ambient
   - Ambient house
   - IDM
   - Techno
+
+additional_info: |
+  Reputedly first put together by Richard D. James at age 17 and recorded around
+  1987, Analogue Bubblebath was first released under artist name
+  "The Aphex Twin" in 1991
 
 # ATTRIBUTION
 author: matt-grey

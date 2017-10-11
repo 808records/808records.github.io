@@ -9,8 +9,8 @@ track:
   appears_on:
     album: Undercover
     discogs_release_ID: 3472666
-  source_url: https://www.discogs.com/Marc-Houle-Undercover/release/3472666
-  spotify_track_URI: https://open.spotify.com/track/4AaV5qMliJhKzqpPvOoheE
+  wikipedia_URL: //en.wikipedia.org/wiki/Marc_Houle
+  spotify_track_URI: spotify:track:4AaV5qMliJhKzqpPvOoheE
 
 categories:
   - Techno

@@ -12,11 +12,11 @@ track:
   wikipedia_URL: //en.wikipedia.org/wiki/Musique_Non-Stop
   spotify_track_URI: spotify:track:5PKFJx9mXZQo84XQsASKrB
 
-additional_info: |
-  Mentioned on Kraftwerk's [equipment list](http://kraftwerkfaq.hu/equipment.html)
-
 categories:
   - Synthpop
+
+additional_info: |
+  Mentioned on Kraftwerk's [equipment list](//kraftwerkfaq.hu/equipment.html)
 
 # ATTRIBUTION
 author: matt-grey
