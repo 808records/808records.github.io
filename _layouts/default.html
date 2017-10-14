@@ -5,13 +5,13 @@ layout: compress
 <html lang="en">
 {% include head.html %}
 <body>
+  {% include scripts.html %}
   <div class="global-wrapper">
     {% include header.html %}
     <main class="container">
       {{ content }}
     </main>
     {% include footer.html %}
-    {% include scripts.html %}
   </div>
 </body>
 </html>

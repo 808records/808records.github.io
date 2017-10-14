@@ -16,6 +16,11 @@ categories:
   - House
   - Techno
 
+additional_info: |
+  "808 State" take their name from the Roland TR-808, their name was the
+  inspiration for the title of this site.
+
+
 # ATTRIBUTION
 author: matt-grey
 ---

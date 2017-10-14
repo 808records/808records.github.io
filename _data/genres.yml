@@ -1,23 +1,81 @@
 - genre: "Acid"
+  slug: acid
+
 - genre: "Ambient house"
+  slug: ambient-house
+
 - genre: "Ambient"
+  slug: ambient
+
 - genre: "Crunk"
+  slug: crunk
+
 - genre: "Disco"
+  slug: disco
+
 - genre: "Downtempo"
+  slug: downtempo
+
 - genre: "Electro"
+  slug: electro
+
 - genre: "Experimental"
-- genre: "Folk, World, and Country"
+  slug: experimental
+
+- genre: "Folk, World, & Country"
+  slug: folk-world-country
+
 - genre: "Funk"
+  slug: funk
+
 - genre: "G-Funk"
+  slug: g-funk
+
 - genre: "Gangsta rap"
+  slug: gangsta-rap
+
 - genre: "Hip hop"
+  slug: hip-hop
+
 - genre: "House"
+  slug: house
+
 - genre: "IDM"
+  slug: idm
+
 - genre: "Indian Classical"
+  slug: indian-classical
+
 - genre: "Minimal"
+  slug: minimal
+
+- genre: "New wave"
+  slug: new-wave
+
 - genre: "Nu-disco"
+  slug: nu-disco
+
+- genre: "Pop"
+  slug: pop
+
 - genre: "Post-disco"
+  slug: post-disco
+
+- genre: "R&B"
+  slug: r-b
+
 - genre: "Soul"
-- genre: "Synthpop"
+  slug: soul
+
+- genre: "Synth-pop"
+  slug: synth-pop
+
 - genre: "Techno"
+  slug: techno
+
+- genre: "Trap"
+  slug: trap
+
 - genre: "Trip hop"
+  slug: trip-hop
+

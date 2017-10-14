@@ -49,7 +49,21 @@ layout: default
         {% endfor %}
       </ul>
 
-      <iframe src="//open.spotify.com/embed?uri={{ page.track.spotify_track_URI }}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+      {% if page.track.spotify_track_URI %}
+        <iframe class="spotify-embed"
+                src="//open.spotify.com/embed?uri={{ page.track.spotify_track_URI }}"
+                width="300"
+                height="80"
+                frameborder="0"
+                allowtransparency="true"></iframe>
+      {% endif %}
+
+      {% if page.track.tidal_track_ID %}
+        <div class="tidal-embed"
+             data-type="t"
+             data-id="7597267"></div>
+        <script src="https://embed.tidal.com/tidal-embed.js"></script>
+      {% endif %}
 
       <div class="source-links">
         {% if page.additional_info %}
@@ -71,3 +85,7 @@ layout: default
     </div>
   </div>
 </div>
+
+<script>
+  {% include /javascript/track/show.js %}
+</script>

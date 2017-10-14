@@ -5,6 +5,6 @@ permalink: /genres/
 
 <ul>
 {% for genre_entity in site.data.genres  %}
-  <li><a href="{{ genre_entity.genre | slugify }}">{{ genre_entity.title }}</a></li>
+  <li><a href="{{ genre_entity.genre | slugify }}">{{ genre_entity.genre }}</a></li>
 {% endfor %}
 <ul>

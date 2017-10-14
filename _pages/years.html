@@ -8,11 +8,6 @@ permalink: /years/
   <h3><a href="{{ year.name }}">{{ year.name }}</a></h3>
 {% endfor %}
 
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.published_date"  %}
-{% for year in posts_by_year %}
-  <h3><a href="{{ year.name }}"></a>{{ year.name }} {{ year.title }}</h3>
-{% endfor %}
-
 {% capture highest_year_count %}
   {% assign posts_by_year = posts_by_year | sort: 'size' %}
 

@@ -15,6 +15,7 @@ track:
 categories:
   - Techno
   - Minimal
+  - Acid
 
 # ATTRIBUTION
 author: matt-grey

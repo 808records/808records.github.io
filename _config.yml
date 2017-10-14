@@ -100,7 +100,7 @@ page_gen:
     dir: 'years'
   - data: 'genres'
     template: 'genre'
-    name: 'genre'
+    name: 'slug'
     dir: 'genres'
 
 navigation:

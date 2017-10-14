@@ -13,7 +13,7 @@ track:
   spotify_track_URI: spotify:track:5PKFJx9mXZQo84XQsASKrB
 
 categories:
-  - Synthpop
+  - Synth-pop
 
 additional_info: |
   Mentioned on Kraftwerk's [equipment list](//kraftwerkfaq.hu/equipment.html)
