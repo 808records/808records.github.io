@@ -1,4 +1,5 @@
 ---
+layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 {% if page.xsl %}
@@ -33,11 +34,12 @@
     </author>
   {% endif %}
 
-  {% assign posts = site.posts | where_exp: "post", "post.draft != true" %}
-  {% for post in posts limit: 10 %}
+  {% assign latest_posts = site.posts | where_exp: "post", "post.draft != true" | sort: 'published_date' | reverse %}
+  {% for post in latest_posts limit: 10 %}
     <entry{% if post.lang %}{{" "}}xml:lang="{{ post.lang }}"{% endif %}>
-      <title type="html">{{ post.title | smartify | strip_html | normalize_whitespace | xml_escape }}</title>
-      <link href="{{ post.url | absolute_url }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}" />
+      {% assign post_title = post.track.artist | smartify | strip_html | normalize_whitespace | append: ' - ' | append: post.track.title | smartify | strip_html | normalize_whitespace %}
+      <title type="html">{{ post_title | xml_escape  }}</title>
+      <link href="{{ post.url | absolute_url }}" rel="alternate" type="text/html" title="{{ post_title | xml_escape }}" />
       <published>{{ post.published_date | date_to_xmlschema }}</published>
       <updated>{{ post.last_modified_at | default: post.published_date | date_to_xmlschema }}</updated>
       <id>{{ post.id | absolute_url | xml_escape }}</id>

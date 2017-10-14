@@ -66,13 +66,17 @@ layout: default
       {% endif %}
 
       <div class="source-links">
+        <h3>Links</h3>
         {% if page.additional_info %}
           {{ page.additional_info | markdownify }}
         {% endif %}
         {% if page.track.wikipedia_URL %}
-          <a href="{{ page.track.wikipedia_URL }}">Wikipedia entry</a>
+          <a href="{{ page.track.wikipedia_URL }}" target="_blank">Wikipedia entry</a>
         {% elsif page.track.source_URL %}
-          <a href="{{ page.track.source_URL }}">Source</a>
+          <a href="{{ page.track.source_URL }}" target="_blank">Source</a>
+        {% endif %}
+        {% if page.track.appears_on.discogs_release_ID %}
+          <a href="//discogs.com/release/{{ page.track.appears_on.discogs_release_ID }}" target="_blank">Discogs release</a>
         {% endif %}
       </div>
 

@@ -41,9 +41,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-creators:
-  - Matt Grey
-  - Alex Winter
+author:
+  - name: Matt Grey
+    url: 'himatt.com'
+  - name: Alex Winter
 
 # Build settings
 markdown: kramdown
