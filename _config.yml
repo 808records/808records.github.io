@@ -29,7 +29,6 @@
 plugins:
   - bourbon
   - neat
-  - jekyll-feed
   - jekyll-paginate-v2
 
 include:
