@@ -1,10 +1,8 @@
 /* SITE */
-
 $site-background-color: #2b2b2b;
 $site-text-color: #fff;
 
 /* GRID */
-
 $grid-gutter-width: 15px;
 
 /* BREAKPOINTS (BOOTSTRAP DEFAULT) */
@@ -20,3 +18,7 @@ $screen-md: 992px;
 
 // large screen / wide desktop
 $screen-lg: 1200px;
+
+/* SIDEBAR */
+$sidebar-width: 240px;
+$sidebar-background-color: black;

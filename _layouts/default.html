@@ -4,14 +4,11 @@ layout: compress
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body>
+<body class="page">
   {% include scripts.html %}
-  <div class="global-wrapper">
-    {% include header.html %}
-    <main class="container">
-      {{ content }}
-    </main>
-    {% include footer.html %}
-  </div>
+  {% include sidebar.html %}
+  <main class="main-content">
+    {{ content }}
+  </main>
 </body>
 </html>
