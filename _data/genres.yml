@@ -1,14 +1,26 @@
 - genre: "Acid"
   slug: acid
 
-- genre: "Ambient house"
-  slug: ambient-house
-
 - genre: "Ambient"
   slug: ambient
 
+- genre: "Acid house"
+  slug: acid-house
+
+- genre: "Ambient house"
+  slug: ambient-house
+
+- genre: "Ambient pop"
+  slug: ambient-pop
+
+- genre: "Ambient techno"
+  slug: ambient-techno
+
 - genre: "Crunk"
   slug: crunk
+
+- genre: "Dance-pop"
+  slug: dance-pop
 
 - genre: "Disco"
   slug: disco
@@ -19,11 +31,17 @@
 - genre: "Electro"
   slug: electro
 
+- genre: "Electroclash"
+  slug: electroclash
+
 - genre: "Experimental"
   slug: experimental
 
 - genre: "Folk, World, & Country"
   slug: folk-world-country
+
+- genre: "Freestyle"
+  slug: freestyle
 
 - genre: "Funk"
   slug: funk
@@ -34,8 +52,14 @@
 - genre: "Gangsta rap"
   slug: gangsta-rap
 
+- genre: "Glitch"
+  slug: glitch
+
 - genre: "Hip hop"
   slug: hip-hop
+
+- genre: "Hip house"
+  slug: hip-house
 
 - genre: "Hi-NRG"
   slug: hi-nrg
@@ -66,6 +90,9 @@
 
 - genre: "R&B"
   slug: r-b
+
+- genre: "Soft rock"
+  slug: soft-rock
 
 - genre: "Soul"
   slug: soul

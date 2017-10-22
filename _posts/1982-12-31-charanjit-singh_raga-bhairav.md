@@ -16,7 +16,7 @@ categories:
   - Disco
   - Indian Classical
   - Acid
-  - Folk, World, and Country
+  - Folk, World, & Country
 
 additional_info: |
   Singh's album "Synthesizing: Ten Ragas to a Disco Beat" is retrospectively

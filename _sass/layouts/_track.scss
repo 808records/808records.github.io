@@ -10,10 +10,12 @@
   }
 
   .track-release-artwork {
+    @extend .clearfix;
     display: block;
     width: 100%;
     background: black;
     box-shadow: 0px 0px 47px 0px rgba(black, 0.5);
+    line-height: 0;
   }
 
   .track-release-artwork__image {

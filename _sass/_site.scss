@@ -1,9 +1,11 @@
+html, body { height: 100% }
+
 html {
   background: $site-background-color;
 }
 
 .main-content {
-  background: blue;
+  background: orange;
   margin-left: $sidebar-width;
   overflow: hidden;
 }

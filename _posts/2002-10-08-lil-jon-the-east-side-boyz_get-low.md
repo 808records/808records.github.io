@@ -18,7 +18,7 @@ categories:
 
 additional_info: |
   Get low is considered to be the first track to bring the
-  [Hip hop](/genres/crunk) sub-genre [Crunk](/genres/crunk) into the mainstream.
+  [Hip hop](/genres/hip-hop) sub-genre [Crunk](/genres/crunk) into the mainstream.
 
 # ATTRIBUTION
 author: alex-winter

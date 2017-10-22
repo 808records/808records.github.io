@@ -13,7 +13,7 @@ track:
   spotify_track_URI: spotify:track:4vrKafaLj9GVsQcbFM1JBa
 
 categories:
-  - Nu-Disco
+  - Nu-disco
   - House
   - Techno
 

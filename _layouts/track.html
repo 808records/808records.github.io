@@ -55,7 +55,7 @@ layout: default
                 width="300"
                 height="80"
                 frameborder="0"
-                allowtransparency="true"></iframe>
+                allowtransparency="true" seamless></iframe>
       {% endif %}
 
       {% if page.track.tidal_track_ID %}
@@ -63,6 +63,12 @@ layout: default
              data-type="t"
              data-id="7597267"></div>
         <script src="https://embed.tidal.com/tidal-embed.js"></script>
+      {% endif %}
+
+      {% if page.track.bandcamp %}
+
+      <iframe style="border: 0; width: 100%; height: 120px;"
+              src="https://bandcamp.com/EmbeddedPlayer/album={{ page.track.bandcamp.album_ID }}/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track={{ page.track.bandcamp.track_ID }}/transparent=true/" seamless></iframe>
       {% endif %}
 
       <div class="source-links">

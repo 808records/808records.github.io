@@ -41,7 +41,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-author:
+authors:
   - name: Matt Grey
     url: 'himatt.com'
   - name: Alex Winter
@@ -111,13 +111,15 @@ navigation:
   - title: Submit
     url: /submit
 
+sitemap: true
+
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
 # The values here represent the defaults if nothing is set
 pagination:
 
   # Site-wide kill switch, disabled here it doesn't run at all
-  enabled: false
+  enabled: true
 
   # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
   debug: false
