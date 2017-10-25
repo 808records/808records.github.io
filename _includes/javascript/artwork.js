@@ -1,7 +1,5 @@
-(function ($) {
 
-var artwork = function (track, attr) {
-    var releaseArtwork = track.find('[data-release-artwork]');
+var artwork = function (track, releaseArtwork, type) {
     var discogsReleaseId = track.data('discogs_release_id');
 
     $.ajax({
@@ -12,7 +10,15 @@ var artwork = function (track, attr) {
       },
       dataType: 'json',
       beforeSend: function () {
-        releaseArtwork.attr('src', 'https://media.giphy.com/media/3oEhmM10mIi1dkMfmg/giphy.gif');
+        var loadingImage = 'https://media.giphy.com/media/3oEhmM10mIi1dkMfmg/giphy.gif';
+
+        if (type === 'image') {
+          releaseArtwork.attr('src', loadingImage);
+        }
+
+        if (type === 'background') {
+          releaseArtwork.css('background-image', 'url("' + loadingImage + '")');
+        }
       },
       success: function (res) {
         var images;
@@ -33,14 +39,16 @@ var artwork = function (track, attr) {
 
         window.images = images;
 
-        if () {
+        if (type === 'image') {
           releaseArtwork.attr('src', images[0].uri);
+        }
+
+        if (type === 'background') {
+          releaseArtwork.css('background-image', 'url("' + images[0].uri + '")');
         }
       },
       error: function (jqXHR, textStatus, errorThrown) {
 
       }
     });
-}
-
-})(self.jQuery);
+};

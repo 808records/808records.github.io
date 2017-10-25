@@ -8,9 +8,15 @@ layout_scope: genre
 {% assign this_genre = page.title %}
 
 {% for track_entity in site.categories[this_genre] %}
-  <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}"><a href="{{ track_entity.url }}">{{ track_entity.track.title }} — {{ track_entity.track.artist }}</a></li>
+  <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}" data-release-artwork><a href="{{ track_entity.url }}">{{ track_entity.track.title }} — {{ track_entity.track.artist }}</a></li>
 {% endfor %}
 
 <script>
   {% include /javascript/artwork.js %}
+
+  $(document).ready(function () {
+    $('[data-discogs_release_id]').each(function () {
+      artwork($(this), $(this), 'background');
+    });
+  });
 </script>

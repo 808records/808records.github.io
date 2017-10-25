@@ -98,4 +98,12 @@ layout: default
 
 <script>
   {% include /javascript/artwork.js %}
+
+  $(document).ready(function () {
+    artwork(
+      $('[data-discogs_release_id]'),
+      $('[data-release-artwork]'),
+      'image'
+    );
+  });
 </script>
