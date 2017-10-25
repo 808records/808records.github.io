@@ -5,7 +5,7 @@ published_date: 2017-10-22
 # SONG
 track:
   title: Bossy
-  artist: Kelis
+  artist: Kelis feat. Too $hort
   appears_on:
     album: Kelis Was Here
     discogs_release_ID: 781888
@@ -17,7 +17,9 @@ categories:
   - Hip hop
 
 additional_info: |
- The 808 is mentioned in the [lyrics](//genius.com/531128)
+  The 808 is mentioned in the [lyrics](//genius.com/531128)
+
+lyric_mention: true
 
 # ATTRIBUTION
 author: matt-grey

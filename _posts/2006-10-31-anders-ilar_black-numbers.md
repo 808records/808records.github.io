@@ -8,7 +8,7 @@ track:
   artist: Anders Ilar
   appears_on:
     album: Nightwidth
-    discogs_release_ID: 15290
+    discogs_release_ID: 819063
   wikipedia_URL: //en.wikipedia.org/wiki/Anders_Ilar
   spotify_track_URI: spotify:track:2ySq5RU1zItgQbUNQQXasY
 

@@ -73,23 +73,23 @@ collections:
     output: true
 
 defaults:
-  - scope:
+  - scope: # Posts (Tracks)
       path: ""
       type: "posts"
     values:
       layout: "track"
       permalink: /tracks/:title/
-  - scope:
+  - scope: # Genres
       path: ""
       type: genres
     values:
-      layout: genre
+      layout: "genre"
       permalink: /genres/:title/
-  - scope:
+  - scope: # Authors
       path: ""
       type: authors
     values:
-      layout: author
+      layout: "author"
       permalink: /authors/:title/
 
 page_gen-dirs: true # uncomment, if you prefer to generate named folders

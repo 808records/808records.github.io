@@ -1,26 +1,21 @@
 ---
 layout: default
+title: Artists
 permalink: /artists/
 published: false
 ---
 
-{% for post in site.posts  %}
-  {% capture this_artist %}{{ post.track.artist }}{% endcapture %}
-  {% capture next_artist %}{{ post.previous.track.artist }}{% endcapture %}
+{% assign posts_by_artist = site.posts | sort: 'track.artist' | group_by_exp:"post", "post.track.artist" %}
+<ul>
+{% for artist in posts_by_artist %}
+  {% assign this_artist = artist.name %}
+  <li>{{ artist.name }} - ({{ artist.size | pluralize: 'track', 'tracks' }})</li>
 
-  {% if forloop.first %}
-    <h2>{{ this_artist }}</h2>
-    <ul>
-  {% endif %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% if forloop.last %}
-    </ul>
-  {% else %}
-    {% if this_artist != next_artist %}
-    </ul>
-
-    <h2>{{next_artist}}</h2>
-    <ul>
-    {% endif %}
-  {% endif %}
+  {% assign artist_tracks = artist.items | sort: 'track.title'%}
+  <ul>
+    {% for track_entity in artist_tracks %}
+      <li><a href="/tracks/{{ track_entity.slug }}">{{ track_entity.track.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endfor %}
+</ul>

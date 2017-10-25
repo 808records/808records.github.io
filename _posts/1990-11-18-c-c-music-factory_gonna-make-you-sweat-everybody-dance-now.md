@@ -14,7 +14,7 @@ track:
 
 categories:
   - Dance-pop
-  - Hip House
+  - Hip house
 
 # ATTRIBUTION
 author: alex-winter

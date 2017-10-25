@@ -4,8 +4,8 @@ published_date: 2017-10-22
 
 # SONG
 track:
-  title: Whitney Houston
-  artist: I Wanna Dance with Somebody (Who Loves Me)
+  title: I Wanna Dance with Somebody (Who Loves Me)
+  artist: Whitney Houston
   appears_on:
     album: Whitney
     discogs_release_ID: 3548593

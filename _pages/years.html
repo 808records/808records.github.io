@@ -1,9 +1,10 @@
 ---
 layout: default
+title: Years
 permalink: /years/
 ---
 
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'"  %}
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 {% for year in posts_by_year %}
   <h3><a href="{{ year.name }}">{{ year.name }}</a></h3>
 {% endfor %}
@@ -26,10 +27,10 @@ permalink: /years/
 
     {% assign number_of_tracks_in_year = year.size | times: 10 %}
     {% capture year_percentage %}{{ number_of_tracks_in_year | divided_by: highest_year_count | times: 10 }}{% endcapture %}
-
-    <div style="float: left; background: red; min-height: 10px; margin-right: 2px; height: {{ year_percentage | append: '%' }} ">
-      {{ year.name }} {{ year.size }}
-    </div>
-
+    <a href="{{ year.name }}">
+      <div style="position: relative; display: block; float: left; background: red; width: 32px; min-height: 50px; margin-right: 2px; height: {{ year_percentage | append: '%' }} ">
+        {{ year.name }} ({{ year.size }})
+      </div>
+    </a>
   {% endfor %}
 </div>

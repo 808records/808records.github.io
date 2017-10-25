@@ -1,8 +1,7 @@
 (function ($) {
 
-  $(document).ready(function () {
-    var track = $('[data-discogs_release_id]');
-    var releaseArtwork = $('[data-release-artwork]');
+var artwork = function (track, attr) {
+    var releaseArtwork = track.find('[data-release-artwork]');
     var discogsReleaseId = track.data('discogs_release_id');
 
     $.ajax({
@@ -34,12 +33,14 @@
 
         window.images = images;
 
-        releaseArtwork.attr('src', images[0].uri);
+        if () {
+          releaseArtwork.attr('src', images[0].uri);
+        }
       },
       error: function (jqXHR, textStatus, errorThrown) {
 
       }
     });
-  });
+}
 
 })(self.jQuery);

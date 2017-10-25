@@ -1,111 +1,114 @@
-- genre: "Acid"
+- title: "Acid"
   slug: acid
 
-- genre: "Ambient"
+- title: "Afrobeat"
+  slug: afrobeat
+
+- title: "Ambient"
   slug: ambient
 
-- genre: "Acid house"
+- title: "Acid house"
   slug: acid-house
 
-- genre: "Ambient house"
+- title: "Ambient house"
   slug: ambient-house
 
-- genre: "Ambient pop"
+- title: "Ambient pop"
   slug: ambient-pop
 
-- genre: "Ambient techno"
+- title: "Ambient techno"
   slug: ambient-techno
 
-- genre: "Crunk"
+- title: "Crunk"
   slug: crunk
 
-- genre: "Dance-pop"
+- title: "Dance-pop"
   slug: dance-pop
 
-- genre: "Disco"
+- title: "Disco"
   slug: disco
 
-- genre: "Downtempo"
+- title: "Downtempo"
   slug: downtempo
 
-- genre: "Electro"
+- title: "Electro"
   slug: electro
 
-- genre: "Electroclash"
+- title: "Electroclash"
   slug: electroclash
 
-- genre: "Experimental"
+- title: "Experimental"
   slug: experimental
 
-- genre: "Folk, World, & Country"
+- title: "Folk, World, & Country"
   slug: folk-world-country
 
-- genre: "Freestyle"
+- title: "Freestyle"
   slug: freestyle
 
-- genre: "Funk"
+- title: "Funk"
   slug: funk
 
-- genre: "G-Funk"
+- title: "G-Funk"
   slug: g-funk
 
-- genre: "Gangsta rap"
+- title: "Gangsta rap"
   slug: gangsta-rap
 
-- genre: "Glitch"
+- title: "Glitch"
   slug: glitch
 
-- genre: "Hip hop"
+- title: "Hip hop"
   slug: hip-hop
 
-- genre: "Hip house"
+- title: "Hip house"
   slug: hip-house
 
-- genre: "Hi-NRG"
+- title: "Hi-NRG"
   slug: hi-nrg
 
-- genre: "House"
+- title: "House"
   slug: house
 
-- genre: "IDM"
+- title: "IDM"
   slug: idm
 
-- genre: "Indian Classical"
+- title: "Indian Classical"
   slug: indian-classical
 
-- genre: "Minimal"
+- title: "Minimal"
   slug: minimal
 
-- genre: "New wave"
+- title: "New wave"
   slug: new-wave
 
-- genre: "Nu-disco"
+- title: "Nu-disco"
   slug: nu-disco
 
-- genre: "Pop"
+- title: "Pop"
   slug: pop
 
-- genre: "Post-disco"
+- title: "Post-disco"
   slug: post-disco
 
-- genre: "R&B"
+- title: "R&B"
   slug: r-b
 
-- genre: "Soft rock"
+- title: "Soft rock"
   slug: soft-rock
 
-- genre: "Soul"
+- title: "Soul"
   slug: soul
 
-- genre: "Synth-pop"
+- title: "Synth-pop"
   slug: synth-pop
 
-- genre: "Techno"
+- title: "Techno"
   slug: techno
 
-- genre: "Trap"
+- title: "Trap"
   slug: trap
 
-- genre: "Trip hop"
+- title: "Trip hop"
   slug: trip-hop
 

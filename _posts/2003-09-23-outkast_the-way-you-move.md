@@ -20,6 +20,8 @@ categories:
 additional_info: |
   The 808 is mentioned in the [lyrics](//genius.com/186485)
 
+lyric_mention: true
+
 # ATTRIBUTION
 author: matt-grey
 ---

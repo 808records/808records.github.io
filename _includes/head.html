@@ -3,19 +3,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>
   {% if page.title %}
     {% if page.layout == 'track' %}
-      {% assign words = page.title | escape | replace: '_', ' - ' | split: ' ' %}
-      {% capture titlecase %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}
-      {{ titlecase }}
+      <title>{{ page.track.title | escape }} by {{ page.track.artist | escape }} | Tracks | {{ site.title | escape }}</title>
+    {% elsif page.layout_scope == 'genre' %}
+      <title>{{ page.title | escape }} | Genres | {{ site.title | escape }}</title>
+    {% elsif page.layout_scope == 'year' %}
+      <title>{{ page.title | escape }} | Years | {{ site.title | escape }}</title>
+    {% elsif page.layout == 'author' %}
+      <title>{{ page.title | escape }} | Authors | {{ site.title | escape }}</title>
     {% else %}
-      {{ page.title | escape }} | {{site.title | escape}}
+      <title>{{ page.title | escape }} | {{ site.title | escape}}</title>
     {% endif %}
   {% else %}
-    {{ site.title | escape }}
+    <title>{{ site.title | escape }}</title>
   {% endif %}
-  </title>
 
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 

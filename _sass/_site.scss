@@ -1,11 +1,10 @@
-html, body { height: 100% }
+html,
+body { height: 100% }
 
-html {
-  background: $site-background-color;
-}
+html { background: $site-background-color; }
 
 .main-content {
-  background: orange;
+  background: black;
   margin-left: $sidebar-width;
   overflow: hidden;
 }
