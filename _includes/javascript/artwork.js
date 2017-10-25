@@ -2,6 +2,17 @@
 var artwork = function (track, releaseArtwork, type) {
     var discogsReleaseId = track.data('discogs_release_id');
 
+    var setImage = function (url) {
+      switch (type) {
+        case 'image':
+          releaseArtwork.attr('src', url);
+          break;
+        case 'background':
+          releaseArtwork.css('background-image', 'url("' + url + '")');
+          break;
+      }
+    };
+
     $.ajax({
       url: 'https://api.discogs.com/releases/' + discogsReleaseId,
       type: 'GET',
@@ -10,15 +21,7 @@ var artwork = function (track, releaseArtwork, type) {
       },
       dataType: 'json',
       beforeSend: function () {
-        var loadingImage = 'https://media.giphy.com/media/3oEhmM10mIi1dkMfmg/giphy.gif';
-
-        if (type === 'image') {
-          releaseArtwork.attr('src', loadingImage);
-        }
-
-        if (type === 'background') {
-          releaseArtwork.css('background-image', 'url("' + loadingImage + '")');
-        }
+        setImage('https://media.giphy.com/media/3oEhmM10mIi1dkMfmg/giphy.gif');
       },
       success: function (res) {
         var images;
@@ -26,7 +29,7 @@ var artwork = function (track, releaseArtwork, type) {
         images = res.images;
 
         if (images.length === 0) {
-          alert('no image');
+          setImage(''); /* set to image url if no image is available */
         }
 
         images = images.filter(function (image) {
@@ -37,15 +40,7 @@ var artwork = function (track, releaseArtwork, type) {
           images = res.images
         }
 
-        window.images = images;
-
-        if (type === 'image') {
-          releaseArtwork.attr('src', images[0].uri);
-        }
-
-        if (type === 'background') {
-          releaseArtwork.css('background-image', 'url("' + images[0].uri + '")');
-        }
+        setImage(images[0].uri);
       },
       error: function (jqXHR, textStatus, errorThrown) {
 
