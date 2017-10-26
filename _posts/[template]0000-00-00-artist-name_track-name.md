@@ -1,6 +1,11 @@
 ---
 published: false
 published_date: 0000-00-00
+release_date_approximation: year|month|all # marks the most appropriate value if the release day or month isnt available
+# Result as
+# all = Unknown
+# year = 1980
+# month = November 1980
 
 # SONG
 track:

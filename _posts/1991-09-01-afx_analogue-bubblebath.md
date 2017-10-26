@@ -5,7 +5,7 @@ published_date: 2017-09-17
 # SONG
 track:
   title: Analogue Bubblebath
-  artist: "AFX (Aphex Twin)"
+  artist: AFX
   appears_on:
     ep: Analogue Bubblebath
     discogs_release_ID: 15607

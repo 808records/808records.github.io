@@ -17,7 +17,7 @@ categories:
   - Minimal
 
 additional_info: |
- Composed almost entirely from 808 sounds.
+  Composed almost entirely from 808 sounds.
 
 # ATTRIBUTION
 author: matt-grey

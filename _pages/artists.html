@@ -2,7 +2,7 @@
 layout: default
 title: Artists
 permalink: /artists/
-published: false
+published: true
 ---
 
 {% assign posts_by_artist = site.posts | sort: 'track.artist' | group_by_exp:"post", "post.track.artist" %}

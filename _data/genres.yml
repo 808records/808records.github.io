@@ -73,8 +73,17 @@
 - title: "IDM"
   slug: idm
 
-- title: "Indian Classical"
+- title: "Italo-disco"
+  slug: italo-disco
+
+- title: "Indian classical"
   slug: indian-classical
+
+- title: "Indie pop"
+  slug: indie-pop
+
+- title: "Industrial rock"
+  slug: industrial-rock
 
 - title: "Minimal"
   slug: minimal
@@ -90,6 +99,9 @@
 
 - title: "Post-disco"
   slug: post-disco
+
+- title: "Post-punk"
+  slug: post-punk
 
 - title: "R&B"
   slug: r-b

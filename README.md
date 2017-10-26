@@ -14,13 +14,14 @@ A collaborative interactive site that documents the extensive popularity of the 
 
 ### Sources
 - [Tracks](_posts): Published tracks in the form of a post (uses posts directory feature of Jekyll)
-- [Authors](_authors): Authors of posts (published tracks)
-- [Genres](data/genres.yml): Genre of tracks (uses category feature of Jekyll in frontmatter)
-- [Years](data/years.yml): Genre of tracks (uses category feature of Jekyll in frontmatter)
+- [Authors](_authors): Authors of posts (published tracks) - uses collection feature of Jekyll
+- [Genres](_data/genres.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
+- [Years](_data/years.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
 
-### Track posts are grouped by
-- Tracks: In order of publishing
-- Artists: Artist of tracks
-- Genres: Genres of tracks
-- Years: Year of released tracks
-- Authors: Authors of posts (published tracks)
+##### Track posts are grouped by:
+
+- **Tracks:** In chronological order of publishing date, paginated
+- **Genres:** Genres of tracks, each genre has it's own page with respective tracks
+- **Years:** Year of released tracks, each year has it's own page with respective tracks
+- **Artists:** Artist of tracks with their related tracks, alphabetically listed on a single page
+- **Authors:** Authors of posts (published tracks), each author has their own profile page with respective tracks
