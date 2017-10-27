@@ -1,0 +1,43 @@
+---
+pages:
+- _authors/matt-grey.md
+- _authors/lewis-winter.md
+- _authors/alex-winter.md
+hide_body: false
+fields:
+- name: name
+  label: Name
+  type: text
+  hidden: false
+  default: ''
+- name: social_network
+  label: Social network
+  type: field_group
+  fields:
+  - name: name
+    label: Name
+    type: text
+    hidden: false
+    default: ''
+  - name: username
+    label: Username
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: author
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: "/authors/:title/"

@@ -1,0 +1,206 @@
+---
+pages:
+- _posts/2017-05-05-bibio_fix-this-thang.md
+- _posts/2017-03-03-sleaford-mods_bhs.md
+- _posts/2016-11-10-the-xx_on-hold.md
+- _posts/2016-11-04-massive-attack_the-spoils.md
+- _posts/2016-09-30-mr-ozio_freezing-out.md
+- _posts/2016-08-20-frank-ocean_nikes.md
+- _posts/2015-07-21-afx_oberheim-blacet1b.md
+- _posts/2015-07-17-the-chemical-brothers_reflexion.md
+- _posts/2014-04-19-hot-chip_atomic-bomb.md
+- _posts/2014-02-10-todd-terje_delorean-dynamite.md
+- _posts/2013-12-18-dj-snake-lil-jon_turn-down-for-what.md
+- _posts/2013-08-20-nine-inch-nails_everything.md
+- _posts/2013-08-19-shigeto_perfect-crime.md
+- _posts/2013-05-17-daft-punk_doin-it-right.md
+- _posts/2012-12-10-roman-flugel_duck-and-cover.md
+- _posts/2012-11-06-totally-enormous-extinct-dinosaurs_you-need-me-on-my-own.md
+- _posts/2012-02-24-marc-houle_juno-6660.md
+- _posts/2011-09-13-jay-z-kanye-west_niggas-in-paris.md
+- _posts/2010-11-20-flying-lotus_kill-your-co-workers.md
+- _posts/2010-05-15-lcd-soundsystem_i-can-change.md
+- _posts/2008-09-18-kanye-west_love-lockdown.md
+- _posts/2008-02-12-fred-falke_8-08-pm-at-the-beach.md
+- _posts/2007-10-25-britney-spears_break-the-ice.md
+- _posts/2006-10-31-anders-ilar_black-numbers.md
+- _posts/2006-01-31-kelis_bossy.md
+- _posts/2004-11-24-fatima-yamaha_whats-a-girl-to-do.md
+- _posts/2003-09-23-outkast_the-way-you-move.md
+- _posts/2002-10-08-lil-jon-the-east-side-boyz_get-low.md
+- _posts/2001-10-15-afroman_because-i-got-high.md
+- _posts/2000-08-06-fischerspooner_turn-on.md
+- _posts/1997-11-17-optical_moving-808s.md
+- _posts/1996-01-01-boards-of-canada_nlogax.md
+- _posts/1994-03-08-nine-inch-nails_closer.md
+- _posts/1993-10-04-plastikman_spastik.md
+- _posts/1992-02-12-aphex-twin_ageispolis.md
+- _posts/1991-09-01-afx_analogue-bubblebath.md
+- _posts/1990-11-18-c-c-music-factory_gonna-make-you-sweat-everybody-dance-now.md
+- _posts/1989-11-02-808-state_pacific-state.md
+- _posts/1988-09-05-nwa_gangsta-gangsta.md
+- _posts/1988-06-01-a-guy-called-gerald_voodoo-ray.md
+- _posts/1987-11-06-ll-cool-j_going-back-to-cali.md
+- _posts/1987-05-02-whitney-houston_i-wanna-dance-with-somebody-who-loves-me.md
+- _posts/1987-03-02-expose_let-me-be-the-one.md
+- _posts/1986-11-15-beastie-boys_brass-monkey.md
+- _posts/1986-11-10-kraftwerk_musique-non-stop.md
+- _posts/1986-05-15-run-dmc_dumb-girl.md
+- _posts/1986-01-01-adonis_no-way-back.md
+- _posts/1985-01-01-mantronix_needle-to-the-groove.md
+- _posts/1985-01-01-freestyle_dont-stop-the-rock.md
+- _posts/1984-11-30-phil-collins_one-more-night.md
+- _posts/1984-11-11-midnight-star_curious.md
+- _posts/1984-01-01-jesse-saunders_on-and-on.md
+- _posts/1983-08-22-new-order_confusion.md
+- _posts/1983-07-01-the-sos-band_just-be-good-to-me.md
+- _posts/1983-06-17-freeez_iou.md
+- _posts/1983-06-02-hashim_al-naafiysh-the-soul.md
+- _posts/1983-04-01-cybotron_clear.md
+- _posts/1983-01-01-charlie_spacer-woman.md
+- _posts/1982-12-31-charanjit-singh_raga-bhairav.md
+- _posts/1982-09-30-marvin-gaye_sexual-healing.md
+- _posts/1982-05-10-spoons_nova-heart.md
+- _posts/1982-04-17-afrika-bambaataa-and-the-soulsonic-force_planet-rock.md
+- _posts/1982-01-01-man-parrish_hip-hop-be-bop-dont-stop.md
+- _posts/1980-01-01-yellow-magic-orchestra_1000-knives.md
+hide_body: false
+fields:
+- name: published
+  label: Published
+  type: boolean
+  hidden: false
+  default: ''
+- name: published_date
+  label: Published date
+  type: datetime
+  hidden: false
+  default: ''
+- name: release_approximation
+  label: Release approximation
+  type: text
+  hidden: false
+  default: ''
+- name: track
+  label: Track
+  type: field_group
+  fields:
+  - name: title
+    label: Title
+    type: text
+    hidden: false
+    default: ''
+  - name: artist
+    label: Artist
+    type: text
+    hidden: false
+    default: ''
+  - name: appears_on
+    label: Appears on
+    type: field_group
+    fields:
+    - name: album
+      label: Album
+      type: text
+      hidden: false
+      default: ''
+    - name: discogs_release_ID
+      label: Discogs release id
+      type: text
+      hidden: false
+      default: ''
+    - name: single
+      label: Single
+      type: text
+      hidden: false
+      default: ''
+    - name: soundtrack
+      label: Soundtrack
+      type: text
+      hidden: false
+      default: ''
+    - name: ep
+      label: Ep
+      type: text
+      hidden: false
+      default: ''
+    - name: compilation
+      label: Compilation
+      type: text
+      hidden: false
+      default: ''
+    hidden: false
+    default: ''
+  - name: wikipedia_URL
+    label: Wikipedia url
+    type: text
+    hidden: false
+    default: ''
+  - name: spotify_track_URI
+    label: Spotify track uri
+    type: text
+    hidden: false
+    default: ''
+  - name: bandcamp
+    label: Bandcamp
+    type: field_group
+    fields:
+    - name: album_ID
+      label: Album id
+      type: text
+      hidden: false
+      default: ''
+    - name: track_ID
+      label: Track id
+      type: text
+      hidden: false
+      default: ''
+    hidden: false
+    default: ''
+  - name: tidal_track_ID
+    label: Tidal track id
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: categories
+  label: Categories
+  type: tag_list
+  hidden: false
+  default: ''
+- name: additional_info
+  label: Additional info
+  type: textarea
+  hidden: false
+  default: ''
+- name: author
+  label: Author
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: release_date_approximation
+  label: Release date approximation
+  type: text
+  hidden: false
+  default: ''
+- name: lyric_mention
+  label: Lyric mention
+  type: boolean
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: track
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: "/tracks/:title/"

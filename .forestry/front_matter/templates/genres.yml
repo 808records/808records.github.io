@@ -1,0 +1,13 @@
+---
+hide_body: false
+fields:
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: genre
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: "/genres/:title/"
