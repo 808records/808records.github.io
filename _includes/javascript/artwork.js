@@ -11,9 +11,9 @@ var artwork = function (type) {
           break;
         case 'background':
           trackArtwork.css('background-image', 'url("' + url + '")');
-          trackArtwork.addClass('fade-image-in');
           break;
       }
+      trackArtwork.addClass('fade-image-in');
     };
 
     $.ajax({
