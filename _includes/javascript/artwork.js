@@ -1,4 +1,7 @@
 var artwork = function (type) {
+
+  var imageNotFound = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/1200px-12in-Vinyl-LP-Record-Angle.jpg';
+
   $('[data-discogs_release_id]').each(function () {
     var track = $(this);
     var trackArtwork = track.find('[data-release-artwork]');
@@ -29,8 +32,7 @@ var artwork = function (type) {
         images = res.images;
 
         if (images.length === 0) {
-          setImage('');
-          /* set to image url if no image is available */
+          setImage(imageNotFound);
         }
 
         images = images.filter(function (image) {
@@ -44,7 +46,7 @@ var artwork = function (type) {
         setImage(images[0].uri);
       },
       error: function (jqXHR, textStatus, errorThrown) {
-
+        setImage(imageNotFound);
       }
     });
   });
