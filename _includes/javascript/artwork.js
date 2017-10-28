@@ -1,14 +1,16 @@
-
-var artwork = function (track, releaseArtwork, type) {
+var artwork = function (type) {
+  $('[data-discogs_release_id]').each(function () {
+    var track = $(this);
+    var trackArtwork = track.find('[data-release-artwork]');
     var discogsReleaseId = track.data('discogs_release_id');
 
     var setImage = function (url) {
       switch (type) {
         case 'image':
-          releaseArtwork.attr('src', url);
+          trackArtwork.attr('src', url);
           break;
         case 'background':
-          releaseArtwork.css('background-image', 'url("' + url + '")');
+          trackArtwork.css('background-image', 'url("' + url + '")');
           break;
       }
     };
@@ -20,16 +22,14 @@ var artwork = function (track, releaseArtwork, type) {
         token: 'wwQTHCtIJjkAGRqRRbZjWWcsPhPswmpRJKQpyBSl'
       },
       dataType: 'json',
-      beforeSend: function () {
-        setImage('https://media.giphy.com/media/3oEhmM10mIi1dkMfmg/giphy.gif');
-      },
       success: function (res) {
         var images;
 
         images = res.images;
 
         if (images.length === 0) {
-          setImage(''); /* set to image url if no image is available */
+          setImage('');
+          /* set to image url if no image is available */
         }
 
         images = images.filter(function (image) {
@@ -46,4 +46,5 @@ var artwork = function (track, releaseArtwork, type) {
 
       }
     });
+  });
 };

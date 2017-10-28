@@ -18,10 +18,4 @@ layout_scope: genre
 
 <script>
   {% include /javascript/artwork.js %}
-
-  $(document).ready(function () {
-    $('[data-discogs_release_id]').each(function () {
-      artwork($(this), $(this), 'background');
-    });
-  });
 </script>
