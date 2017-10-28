@@ -15,7 +15,15 @@ track:
     album|ep|single|compilation|soundtrack: Source name
     discogs_release_ID: 000000
   wikipedia_URL: //en.wikipedia.org/wiki/xxx
-  spotify_track_URI: spotify:track:xxxxxxxxxxxxxxxx
+
+# One of the following
+  spotify_track_URI: spotify:track:00x0xxx00xx0x0
+  bandcamp:
+    album_ID: 123456789
+    track_ID: 123456789
+  soundcloud_track_ID:
+  tidal_track_ID: 1234567
+  youtube_video_ID: 00x0xxx00xx0
 
 categories:
   - Genre 1

@@ -55,7 +55,29 @@ layout: default
                 width="300"
                 height="80"
                 frameborder="0"
-                allowtransparency="true" seamless></iframe>
+                allowtransparency="true"
+                seamless></iframe>
+      {% endif %}
+
+      {% if page.track.bandcamp %}
+        <iframe class="youtube_embed"
+                width="300"
+                height="120"
+                frameborder="0"
+                allowtransparency="true"
+                src="https://bandcamp.com/EmbeddedPlayer/album={{ page.track.bandcamp.album_ID }}/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track={{ page.track.bandcamp.track_ID }}/transparent=true/"
+                seamless></iframe>
+      {% endif %}
+
+      {% if page.track.soundcloud_track_ID %}
+        <iframe class="soundcloud-embed"
+                width="300"
+                height="120"
+                scrolling="no"
+                frameborder="0"
+                allowtransparency="true"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.track.soundcloud_track_ID }}&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
+                seamless></iframe>
       {% endif %}
 
       {% if page.track.tidal_track_ID %}
@@ -65,9 +87,13 @@ layout: default
         <script src="https://embed.tidal.com/tidal-embed.js"></script>
       {% endif %}
 
-      {% if page.track.bandcamp %}
-        <iframe style="border: 0; width: 100%; height: 120px;"
-                src="https://bandcamp.com/EmbeddedPlayer/album={{ page.track.bandcamp.album_ID }}/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track={{ page.track.bandcamp.track_ID }}/transparent=true/" seamless></iframe>
+      {% if page.track.youtube_video_ID %}
+        <iframe class="youtube-embed"
+                width="300"
+                height="120"
+                src="https://www.youtube.com/embed/{{ page.track.youtube_video_ID }}"
+                frameborder="0"
+                seamless></iframe>
       {% endif %}
 
       <div class="source-links">

@@ -15,6 +15,7 @@ track:
 categories:
   - Indie pop
   - Synth pop
+  - Ambient pop
 
 # ATTRIBUTION
 author: matt-grey
