@@ -14,6 +14,7 @@ track:
 
 categories:
   - Hip hop
+  - Conscious hip hop
 
 # ATTRIBUTION
 author: alex-winter

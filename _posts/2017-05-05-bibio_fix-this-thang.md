@@ -17,7 +17,7 @@ categories:
 
 additional_info: |
   Bibio often uses a TR-808 for his tracks, his EP
-  ["Beyond Serious"](//thevinylfactory.com/news/bibio-beyond-serious-vinyl)
+  [Beyond Serious](//thevinylfactory.com/news/bibio-beyond-serious-vinyl)
   uses an 808 exclusively, and even features one on the album artwork.
 
 # ATTRIBUTION
