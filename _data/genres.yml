@@ -10,6 +10,9 @@
 - title: "Acid house"
   slug: acid-house
 
+- title: "Alternative rock"
+  slug: alternative-rock
+
 - title: "Ambient house"
   slug: ambient-house
 
@@ -81,6 +84,9 @@
 
 - title: "Indie pop"
   slug: indie-pop
+
+- title: "Indie rock"
+  slug: indie-rock
 
 - title: "Industrial rock"
   slug: industrial-rock

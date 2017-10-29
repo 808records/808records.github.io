@@ -6,15 +6,16 @@ layout_scope: genre
 <h1>{{ page.title }}</h1>
 
 {% assign this_genre = page.title %}
-
-{% for track_entity in site.categories[this_genre] %}
-  <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
-    <a href="{{ track_entity.url }}">
-      <span data-release-artwork class="artwork"></span>
-      {{ track_entity.track.title }} — {{ track_entity.track.artist }}
-    </a>
-  </li>
-{% endfor %}
+<ul>
+  {% for track_entity in site.categories[this_genre] %}
+    <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
+      <a href="{{ track_entity.url }}">
+        <span data-release-artwork class="artwork"></span>
+        {{ track_entity.track.title }} — {{ track_entity.track.artist }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
 
 <script>
   {% include /javascript/artwork.js %}

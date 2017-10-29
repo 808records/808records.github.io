@@ -14,6 +14,7 @@ track:
 
 categories:
   - Industrial rock
+  - Alternative rock
 
 additional_info: |
   The bass drum and open hi-hat sounds from the 808 were compressed and

@@ -14,6 +14,7 @@ track:
 
 categories:
   - Industrial rock
+  - Alternative rock
 
 # ATTRIBUTION
 author: alex-winter

@@ -9,6 +9,8 @@ layout_scope: year
 {% assign this_year = page.year %}
 {% assign tracks = site.posts | where: "date", this_year  %}
 
-{% for track in tracks %}
-  <li><a href="/tracks/{{ track.slug }}">{{ track.title }} – {{ track.date | date: "%-d %b" }}</a></li>
-{% endfor %}
+<ul>
+  {% for track in tracks %}
+    <li><a href="/tracks/{{ track.slug }}">{{ track.title }} – {{ track.date | date: "%-d %b" }}</a></li>
+  {% endfor %}
+</ul>
