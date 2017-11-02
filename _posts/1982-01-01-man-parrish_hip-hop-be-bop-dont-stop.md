@@ -1,7 +1,7 @@
 ---
 published: true
 published_date: 2017-09-29
-release_approximation: year
+release_date_approximation: year
 
 # SONG
 track:

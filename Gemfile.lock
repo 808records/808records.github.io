@@ -66,6 +66,3 @@ DEPENDENCIES
   jekyll-paginate-v2
   neat (= 2.0.0)
   tzinfo-data
-
-BUNDLED WITH
-   1.16.0.pre.3

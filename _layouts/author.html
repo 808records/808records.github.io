@@ -7,6 +7,8 @@ layout: default
 {% assign this_author = page.slug %}
 {% assign tracks = site.posts | where: "author", this_author | sort: 'published_date'%}
 
+<ul>
 {% for track in tracks %}
   <li><a href="/tracks/{{ track.slug }}">{{ track.title }}</a></li>
 {% endfor %}
+</ul>

@@ -10,6 +10,9 @@
 - title: "Acid house"
   slug: acid-house
 
+- title: "Alternative hip hop"
+  slug: alternative-hiip-hop
+
 - title: "Alternative rock"
   slug: alternative-rock
 
@@ -64,6 +67,9 @@
 - title: "Glitch"
   slug: glitch
 
+- title: "Grime"
+  slug: grime
+
 - title: "Hip hop"
   slug: hip-hop
 
@@ -84,6 +90,9 @@
 
 - title: "Indian classical"
   slug: indian-classical
+
+- title: "Indie electronic"
+  slug: indie-electronic
 
 - title: "Indie pop"
   slug: indie-pop

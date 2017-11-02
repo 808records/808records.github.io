@@ -39,11 +39,21 @@ layout: default
           {% endif %}
         {% endif %}
 
-        <dt>Year</dt>
-        <dd><a href="/years/{{ page.date | date: '%Y' }}">{{ page.date | date: '%Y' }}</a></dd>
+        {% capture release_date %}
+          {% if page.release_date_approximation == 'year' %}
+          {% elsif page.release_date_approximation == 'month' %}
+            {{ page.date | date: '%B' }}
+          {% else %}
+            {{ page.date | date: '%-d %B' }}
+          {% endif %}
+        {% endcapture %}
+
+        <dt>Released</dt>
+        <dd>{{ release_date }}<a href="/years/{{ page.date | date: '%Y' }}">{{ page.date | date: '%Y' }}</a></dd>
       </dl>
+
+      <h3>Genre{% if page.categories.size > 1 %}s{% endif %}</h3>
       <ul>
-        Genre{% if page.categories.size > 1 %}s{% endif %}
         {% for genre in page.categories %}
           <li><a href="/genres/{{ genre | slugify }}">{{ genre }}</a></li>
         {% endfor %}
