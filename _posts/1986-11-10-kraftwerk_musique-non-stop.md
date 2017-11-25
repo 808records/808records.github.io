@@ -14,6 +14,7 @@ track:
 
 categories:
   - Synth-pop
+  - Krautrock
 
 additional_info: |
   Mentioned on Kraftwerk's [equipment list](//kraftwerkfaq.hu/equipment.html)

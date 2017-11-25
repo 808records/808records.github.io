@@ -15,7 +15,7 @@ track:
 categories:
   - Disco
   - Indian classical
-  - Acid
+  - Acid house
   - Folk, World, & Country
 
 additional_info: |

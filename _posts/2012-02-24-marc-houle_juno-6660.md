@@ -15,7 +15,7 @@ track:
 categories:
   - Techno
   - Minimal
-  - Acid
+  - Acid house
 
 # ATTRIBUTION
 author: matt-grey

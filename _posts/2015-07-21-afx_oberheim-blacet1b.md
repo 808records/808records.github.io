@@ -14,7 +14,7 @@ track:
 
 categories:
   - Electro
-  - Acid
+  - Acid techno
   - Techno
 
 additional_info: |

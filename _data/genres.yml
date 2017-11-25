@@ -1,5 +1,8 @@
-- title: "Acid"
-  slug: acid
+- title: "Acid house"
+  slug: acid-house
+
+- title: "Acid techno"
+  slug: acid-techno
 
 - title: "Afrobeat"
   slug: afrobeat
@@ -7,11 +10,8 @@
 - title: "Ambient"
   slug: ambient
 
-- title: "Acid house"
-  slug: acid-house
-
 - title: "Alternative hip hop"
-  slug: alternative-hiip-hop
+  slug: alternative-hip-hop
 
 - title: "Alternative rock"
   slug: alternative-rock
@@ -33,6 +33,9 @@
 
 - title: "Dance-pop"
   slug: dance-pop
+
+- title: "Dancehall"
+  slug: dancehall
 
 - title: "Disco"
   slug: disco
@@ -85,7 +88,7 @@
 - title: "IDM"
   slug: idm
 
-- title: "Italo-disco"
+- title: "Italo disco"
   slug: italo-disco
 
 - title: "Indian classical"
@@ -103,8 +106,14 @@
 - title: "Industrial rock"
   slug: industrial-rock
 
+- title: "Krautrock"
+  slug: krautrock
+
 - title: "Minimal"
   slug: minimal
+
+- title: "New Jack Swing"
+  slug: new-jack-swing
 
 - title: "New wave"
   slug: new-wave
@@ -123,6 +132,9 @@
 
 - title: "R&B"
   slug: r-b
+
+- title: "Reggae"
+  slug: reggae
 
 - title: "Soft rock"
   slug: soft-rock

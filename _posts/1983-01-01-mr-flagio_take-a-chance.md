@@ -14,7 +14,7 @@ track:
   spotify_track_URI: spotify:track:0lLqS6XnoLYJJXHj57h4jz
 
 categories:
-  - Italo-disco
+  - Italo disco
   - Electro
 
 additional_info: |

@@ -13,7 +13,7 @@ track:
   spotify_track_URI: spotify:track:045G4R2wNFYoLamsXAWb6v
 
 categories:
-  - Italo-disco
+  - Italo disco
   - Electro
 
 # ATTRIBUTION

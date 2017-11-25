@@ -18,16 +18,16 @@ A collaborative interactive site that documents the extensive popularity of the 
 - [Genres](_data/genres.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
 - [Years](_data/years.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
 
-##### Track posts are grouped by:
+#### Track posts are grouped by:
 - **Tracks:** In chronological order of publishing date, paginated
 - **Genres:** Genres of tracks, each genre has it's own page with respective tracks
 - **Years:** Year of released tracks, each year has it's own page with respective tracks
 - **Artists:** Artist of tracks with their related tracks, alphabetically listed on a single page
 - **Authors:** Authors of posts (published tracks), each author has their own profile page with respective tracks
 
-##### External sources
+#### External sources
 - Images are pulled in from the Discogs api from a the discogs release ID related to the track
-- Embeds are generated from either (in order of preference)
+- Embeds are generated from whatever embed is available, either (in order of preference):
   - Spotify URI (`spotify_track_URI`)
   - Bandcamp track ID and album ID (`album_ID` `track_ID`)
   - Soundcloud track ID (`soundcloud_track_ID`)
@@ -35,5 +35,5 @@ A collaborative interactive site that documents the extensive popularity of the 
   - Youtube video ID (`youtube_video_ID`)
 
 ## Contributers
-- Matt Grey - Design, UX, Jekyll templating (CSS, HTML, Liquid) and site architecture
+- [Matt Grey](himatt.com) - Design, UX, Jekyll templating (CSS, HTML, Liquid) and site architecture
 - Alex Winter - Javascript
