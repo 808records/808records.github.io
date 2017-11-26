@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page-with-title
 layout_scope: year
 ---
 
@@ -10,7 +10,18 @@ layout_scope: year
 {% assign tracks = site.posts | where: "date", this_year  %}
 
 <ul>
-  {% for track in tracks %}
-    <li><a href="/tracks/{{ track.slug }}">{{ track.title }} – {{ track.date | date: "%-d %b" }}</a></li>
+  {% for track_entity in tracks %}
+    <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
+      <a href="/tracks/{{ track_entity.slug }}">
+        <span data-release-artwork class="track-artwork"></span>
+        <span >{{ track_entity.title }} – {{ track_entity.date | date: "%-d %b" }}
+      </a>
+    </li>
   {% endfor %}
 </ul>
+
+<script>
+  {% include /javascript/artwork.js %}
+  artwork('background')
+</script>
+

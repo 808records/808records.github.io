@@ -3,8 +3,5 @@ body { height: 100% }
 
 html { background: $site-background-color; }
 
-.main-content {
-  background: black;
-  margin-left: $sidebar-width;
-  overflow: hidden;
+.site-main-content {
 }

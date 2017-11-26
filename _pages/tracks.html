@@ -6,13 +6,19 @@ pagination:
   enabled: true
 ---
 
-<ul class="post-list">
-  {% for post in paginator.posts %}
-  <li>
-    <h2>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> - <span class="post-meta">Posted {{ post.published_date | date: "%b %-d, %Y" }} released: {{ post.date | date: "%b %-d, %Y" }}</span>
-    </h2>
-  </li>
+<ul class="track-list">
+  {% for track_entity in paginator.posts %}
+    <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
+      <a href="/tracks/{{ track_entity.slug }}">
+        <span data-release-artwork class="track-artwork"></span>
+        <h3>{{ track_entity.track.title }}</h3>
+        <span>{{ track_entity.track.artist }}</span>
+        <span class="post-meta">
+          Posted {{ track_entity.published_date | date: "%b %-d, %Y" }}
+          released: {{ track_entity.date | date: "%b %-d, %Y" }}
+        </span>
+      </a>
+    </li>
   {% endfor %}
 </ul>
 
@@ -29,3 +35,8 @@ pagination:
   {% endif %}
 </ul>
 {% endif %}
+
+<script>
+  {% include /javascript/artwork.js %}
+  artwork('background')
+</script>

@@ -1,16 +1,15 @@
 ---
 layout: default
 ---
-<div class="track-page" data-discogs_release_id="{{ page.track.appears_on.discogs_release_ID }}">
+<div class="track-page container" data-discogs_release_id="{{ page.track.appears_on.discogs_release_ID }}">
   <div class="row">
-
-    <div class="col-sm-10 col-sm-offset-2 col-sm-push-12">
+    <div class="col-sm-10 col-sm-offset-2 col-sm-push-12 col-md-8 col-md-offset-3 col-md-push-11">
       <div class="track-release-artwork">
         <img class="track-release-artwork__image" data-release-artwork>
       </div>
     </div>
 
-    <div class="col-sm-12 col-sm-pull-12">
+    <div class="col-sm-12 col-sm-pull-12 col-md-9 col-md-pull-9">
       <h1 class="track-title">{{ page.track.title }}</h1>
       <h2 class="track-artist">{{ page.track.artist }}</h2>
 
@@ -66,7 +65,8 @@ layout: default
                 height="80"
                 frameborder="0"
                 allowtransparency="true"
-                seamless></iframe>
+                seamless>
+        </iframe>
       {% endif %}
 
       {% if page.track.bandcamp %}
@@ -76,7 +76,8 @@ layout: default
                 frameborder="0"
                 allowtransparency="true"
                 src="https://bandcamp.com/EmbeddedPlayer/album={{ page.track.bandcamp.album_ID }}/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track={{ page.track.bandcamp.track_ID }}/transparent=true/"
-                seamless></iframe>
+                seamless>
+        </iframe>
       {% endif %}
 
       {% if page.track.soundcloud_track_ID %}
@@ -87,13 +88,15 @@ layout: default
                 frameborder="0"
                 allowtransparency="true"
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.track.soundcloud_track_ID }}&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
-                seamless></iframe>
+                seamless>
+        </iframe>
       {% endif %}
 
       {% if page.track.tidal_track_ID %}
         <div class="tidal-embed"
              data-type="t"
-             data-id="7597267"></div>
+             data-id="7597267">
+        </div>
         <script src="https://embed.tidal.com/tidal-embed.js"></script>
       {% endif %}
 
@@ -103,7 +106,8 @@ layout: default
                 height="120"
                 src="https://www.youtube.com/embed/{{ page.track.youtube_video_ID }}"
                 frameborder="0"
-                seamless></iframe>
+                seamless>
+        </iframe>
       {% endif %}
 
       <div class="source-links">
@@ -136,51 +140,3 @@ layout: default
   {% include /javascript/artwork.js %}
   artwork('image')
 </script>
-<style>
-  [data-release-artwork] {
-    display: block;
-    width: 200px;
-    height: 200px;
-    opacity: 0;
-    background-size: cover;
-  }
-
-  .fade-image-in {
-    background-repeat: no-repeat;
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-    animation: fadein 2s;
-    opacity: 1;
-  }
-
-  @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  /* Firefox < 16 */
-  @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  /* Safari, Chrome and Opera > 12.1 */
-  @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  /* Internet Explorer */
-  @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  /* Opera < 12.1 */
-  @-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-</style>

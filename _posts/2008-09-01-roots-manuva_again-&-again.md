@@ -8,7 +8,7 @@ track:
   artist: Roots Manuva
   appears_on:
     album: Slime & Reason
-    discogs_release_ID: 1441242
+    discogs_release_ID: 1746874
   wikipedia_URL: //en.wikipedia.org/wiki/Slime_%26_Reason
   spotify_track_URI: spotify:track:28LrI448JZIZolZFWy8eVS
 
