@@ -15,8 +15,8 @@ A collaborative interactive site that documents the extensive popularity of the 
 ### Architecture
 - [Tracks](_posts): Published tracks in the form of a post (uses posts directory feature of Jekyll)
 - [Authors](_authors): Authors of posts (published tracks) - uses collection feature of Jekyll
-- [Genres](_data/genres.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
-- [Years](_data/years.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
+- [Genres](_data/genres.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [Jekyll data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
+- [Years](_data/years.yml): Year of track release (Uses the [Jekyll data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
 
 #### Track posts are grouped by:
 - **Tracks:** In chronological order of publishing date, paginated
@@ -27,7 +27,7 @@ A collaborative interactive site that documents the extensive popularity of the 
 
 #### External sources
 - Images are pulled in from the Discogs api from a the discogs release ID related to the track
-- Embeds are generated from whatever embed is available, either (in order of preference):
+- Embeds are generated from whatever embedding method is available, either (in order of preference):
   - Spotify URI (`spotify_track_URI`)
   - Bandcamp track ID and album ID (`album_ID` `track_ID`)
   - Soundcloud track ID (`soundcloud_track_ID`)

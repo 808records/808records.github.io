@@ -1,7 +1,10 @@
 html,
 body { height: 100% }
 
-html { background: $site-background-color; }
+html {
+  background: $site-background-color;
+  overflow-y: scroll;
+}
 
 .site-main-content {
 }

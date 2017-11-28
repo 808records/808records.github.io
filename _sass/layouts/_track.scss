@@ -13,13 +13,26 @@
     @extend .clearfix;
     display: block;
     width: 100%;
-    box-shadow: 0px 0px 47px 0px rgba(black, 0.5);
     line-height: 0;
   }
 
   .track-release-artwork__image {
+    z-index: 2;
     width: 100%;
-    height: auto;
+    padding-top: 100%;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .track-release-artwork__image--shadow {
+    z-index: 1;
+    margin-top: -95%;
+    filter:
+      blur(30px)
+      grayscale(.6)
+    ;
   }
 
   .track-submission-author {

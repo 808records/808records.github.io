@@ -14,7 +14,7 @@ layout_scope: year
     <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
       <a href="/tracks/{{ track_entity.slug }}">
         <span data-release-artwork class="track-artwork"></span>
-        <span >{{ track_entity.title }} – {{ track_entity.date | date: "%-d %b" }}
+        <span>{{ track_entity.title }} – {{ track_entity.date | date: "%-d %b" }}</span>
       </a>
     </li>
   {% endfor %}

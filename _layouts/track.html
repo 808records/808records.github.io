@@ -3,9 +3,10 @@ layout: default
 ---
 <div class="track-page container" data-discogs_release_id="{{ page.track.appears_on.discogs_release_ID }}">
   <div class="row">
-    <div class="col-sm-10 col-sm-offset-2 col-sm-push-12 col-md-8 col-md-offset-3 col-md-push-11">
+    <div class="col-sm-10 col-sm-offset-2 col-sm-push-12 col-md-9 col-md-offset-2 col-md-push-11">
       <div class="track-release-artwork">
-        <img class="track-release-artwork__image" data-release-artwork>
+        <div class="track-release-artwork__image" data-release-artwork></div>
+        <div class="track-release-artwork__image track-release-artwork__image--shadow" data-release-artwork></div>
       </div>
     </div>
 
@@ -138,5 +139,5 @@ layout: default
 
 <script>
   {% include /javascript/artwork.js %}
-  artwork('image')
+  artwork('background')
 </script>

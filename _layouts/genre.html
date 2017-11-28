@@ -8,12 +8,15 @@ layout_scope: genre
 
 {% assign this_genre = page.title %}
 
-<ul>
+<ul class="grid">
+  <div class="grid-sizer"></div>
+
   {% for track_entity in site.categories[this_genre] %}
-    <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
+    <li class="grid-item" data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
       <a href="{{ track_entity.url }}">
         <span data-release-artwork class="track-artwork"></span>
-        {{ track_entity.track.title }} — {{ track_entity.track.artist }}
+        <span>{{ track_entity.track.title }}</span>
+        <span>{{ track_entity.track.artist }}</span>
       </a>
     </li>
   {% endfor %}
@@ -22,4 +25,16 @@ layout_scope: genre
 <script>
   {% include /javascript/artwork.js %}
   artwork('background')
+
+  {% include /javascript/jQuery.min.js %}
+  {% include /javascript/isotope.min.js %}
+  $('.grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'fitRows',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.grid-sizer',
+      isFitWidth: true
+    }
+  });
 </script>
