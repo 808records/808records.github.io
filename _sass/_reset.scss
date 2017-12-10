@@ -17,7 +17,9 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -42,12 +44,10 @@ time, mark, audio, video {
   background:transparent;
 }
 
-body {
-  line-height: 1;
-}
+body { line-height: 1; }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section,main {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
   display:block;
 }
 
@@ -59,8 +59,10 @@ blockquote, q {
   quotes:none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content:'';
   content:none;
 }
@@ -88,11 +90,10 @@ mark {
   font-weight:bold;
 }
 
-del {
-  text-decoration: line-through;
-}
+del { text-decoration: line-through; }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   text-decoration: none;
   border-bottom:1px dotted;
   cursor:help;
@@ -113,6 +114,7 @@ hr {
   padding:0;
 }
 
-input, select {
-  vertical-align:middle;
-}
+input,
+select { vertical-align:middle; }
+
+button { border-radius: 0; }

@@ -1,6 +1,7 @@
 ---
 published: true
 published_date: 2017-10-27
+release_date_approximation: year
 
 # SONG
 track:

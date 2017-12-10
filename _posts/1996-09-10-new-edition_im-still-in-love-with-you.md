@@ -8,7 +8,7 @@ track:
   artist: New Edition
   appears_on:
     single: No Way Back
-    discogs_release_ID: 227347
+    discogs_release_ID: 3939541
   spotify_track_URI: spotify:track:7KWNTuVSFUziohGRhS3cZL
 
 categories:
