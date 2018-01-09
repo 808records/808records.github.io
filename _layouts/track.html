@@ -36,6 +36,10 @@ layout: default
             <dt>From the soundtrack</dt>
             <dd>{{ page.track.appears_on.soundtrack }}</dd>
 
+          {% elsif page.track.appears_on.mixtape %}
+            <dt>From the mixtape</dt>
+            <dd>{{ page.track.appears_on.mixtape }}</dd>
+
           {% endif %}
         {% endif %}
 

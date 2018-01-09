@@ -79,6 +79,9 @@
 - title: "Grime"
   slug: grime
 
+- title: "Hard rock"
+  slug: hard-rock
+
 - title: "Hip hop"
   slug: hip-hop
 
@@ -111,6 +114,12 @@
 
 - title: "Industrial rock"
   slug: industrial-rock
+
+- title: "Instrumental rock"
+  slug: instrumental-rock
+
+- title: "Jazz Fusion"
+  slug: jazz-fusion
 
 - title: "Krautrock"
   slug: krautrock

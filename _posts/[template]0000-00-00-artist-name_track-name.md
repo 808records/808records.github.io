@@ -16,7 +16,7 @@ track:
     discogs_release_ID: 000000
   wikipedia_URL: //en.wikipedia.org/wiki/xxx
 
-# One of the following
+  # One of the following
   spotify_track_URI: spotify:track:00x0xxx00xx0x0
   bandcamp:
     album_ID: 123456789
