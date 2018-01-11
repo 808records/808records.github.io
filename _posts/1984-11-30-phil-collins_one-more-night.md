@@ -13,6 +13,7 @@ track:
   spotify_track_URI: spotify:track:6fkvIT9KFKxO8poBeKfaEf
 
 categories:
+  - Rock
   - Soft rock
 
 # ATTRIBUTION

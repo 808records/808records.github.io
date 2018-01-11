@@ -13,6 +13,7 @@ track:
   spotify_track_URI: spotify:track:1zcrTJ2FxbP3kLuIUE5RP8
 
 categories:
+  - Rock
   - Krautrock
   - Ambient
 

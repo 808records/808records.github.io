@@ -118,16 +118,13 @@
 - title: "Instrumental rock"
   slug: instrumental-rock
 
-- title: "Jazz Fusion"
-  slug: jazz-fusion
-
 - title: "Krautrock"
   slug: krautrock
 
 - title: "Minimal"
   slug: minimal
 
-- title: "New Jack Swing"
+- title: "New jack swing"
   slug: new-jack-swing
 
 - title: "New wave"
@@ -145,11 +142,17 @@
 - title: "Post-punk"
   slug: post-punk
 
+- title: "Quiet storm"
+  slug: quiet-storm
+
 - title: "R&B"
   slug: r-b
 
 - title: "Reggae"
   slug: reggae
+
+- title: "Rock"
+  slug: rock
 
 - title: "Soft rock"
   slug: soft-rock
@@ -172,5 +175,5 @@
 - title: "Trip hop"
   slug: trip-hop
 
-- title: "UK Garage"
+- title: "UK garage"
   slug: uk-garage

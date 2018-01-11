@@ -13,8 +13,7 @@ track:
   spotify_track_URI: spotify:track:5PKFJx9mXZQo84XQsASKrB
 
 categories:
-  - Synth-pop
-  - Krautrock
+  - Electro
 
 additional_info: |
   Mentioned on Kraftwerk's [equipment list](//kraftwerkfaq.hu/equipment.html)

@@ -14,7 +14,7 @@ track:
 
 categories:
   - House
-  - UK Garage
+  - UK garage
   - Future garage
 
 # ATTRIBUTION

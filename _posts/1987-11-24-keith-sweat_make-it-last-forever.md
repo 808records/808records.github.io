@@ -13,7 +13,7 @@ track:
   spotify_track_URI: spotify:track:2hNmHqQzmM2eBhHjzX8Mdk
 
 categories:
-  - New Jack Swing
+  - New jack swing
   - R&B
   - Soul
 

@@ -13,6 +13,7 @@ track:
   spotify_track_URI: spotify:track:0NNep3grWO95CVGp04gMM4
 
 categories:
+  - Rock
   - Instrumental rock
   - Hard rock
 

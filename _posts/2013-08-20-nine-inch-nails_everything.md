@@ -13,6 +13,7 @@ track:
   spotify_track_URI: spotify:track:1HjrhlTYFy7cMu26Xzsbsj
 
 categories:
+  - Rock
   - Industrial rock
   - Alternative rock
 

@@ -13,6 +13,7 @@ track:
   spotify_track_URI: spotify:track:2hDtkP0ge2Gckcj7qi2NQ2
 
 categories:
+  - Rock
   - Indie rock
   - Alternative rock
 
