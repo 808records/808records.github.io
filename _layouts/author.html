@@ -5,7 +5,7 @@ layout: default
 <h1>{{ page.name }}</h1>
 
 {% assign this_author = page.slug %}
-{% assign tracks = site.posts | where: "author", this_author | sort: 'published_date'%}
+{% assign tracks = site.posts | where: "author", this_author | sort: 'published_date' %}
 
 <ul>
 {% for track in tracks %}
