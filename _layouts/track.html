@@ -63,19 +63,6 @@ layout: default
         {% endfor %}
       </ul>
 
-      {% capture prevent_player_interrupt %}
-        <script>
-          {% comment %}
-            Makes sure user doesn't accidentally close the page as non-spotify
-            embeds do not persist audio.
-          {% endcomment %}
-
-          window.onbeforeunload = function() {
-            return true;
-          };
-        </script>
-      {% endcapture %}
-
       {% if page.track.spotify_track_URI %}
         <iframe class="spotify-embed"
                 src="//open.spotify.com/embed?uri={{ page.track.spotify_track_URI }}"
@@ -88,7 +75,6 @@ layout: default
       {% endif %}
 
       {% if page.track.bandcamp %}
-        {{ prevent_player_interrupt }}
         <iframe class="youtube_embed"
                 width="300"
                 height="120"
