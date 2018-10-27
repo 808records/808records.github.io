@@ -4,7 +4,7 @@ published_date: 2018-01-11
 
 # SONG
 track:
-  title: DLR
+  title: Call Me Up
   artist: Homeshake
   appears_on:
     ep: Glue
