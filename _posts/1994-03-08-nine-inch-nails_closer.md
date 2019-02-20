@@ -7,7 +7,7 @@ track:
   title: Closer
   artist: Nine Inch Nails
   appears_on:
-    single: The Downward Spiral
+    album: The Downward Spiral
     discogs_release_ID: 847868
   wikipedia_URL: //en.wikipedia.org/wiki/Closer_(Nine_Inch_Nails_song)
   spotify_track_URI: spotify:track:4ysiI2bYbXcGT8jMXEPQSk

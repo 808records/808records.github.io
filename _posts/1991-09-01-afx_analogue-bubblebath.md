@@ -17,7 +17,7 @@ categories:
   - Ambient techno
   - IDM
   - Techno
-  # - Acid Techno
+  - Acid techno
 
 additional_info: |
   Reputedly first put together by Richard D. James at age 17 and recorded around

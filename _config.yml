@@ -47,6 +47,9 @@ authors:
     url: 'himatt.com'
   - name: Alex Winter
 
+social:
+  twitter_username: find808
+
 # Build settings
 markdown: kramdown
 

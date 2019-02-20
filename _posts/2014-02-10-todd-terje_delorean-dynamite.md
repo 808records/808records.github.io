@@ -19,8 +19,8 @@ categories:
 additional_info: |
   For Delorean Dynamite a Roland TR-808
   [was used alongside](https://www.discogs.com/Todd-Terje-Its-Album-Time/release/5513520){:target="_blank"}
-  a Boss DR55 and Linn Drum MK2 drum machines to create a vintage 80s
-  [Hi-NRG](/genres/hi-nrg) sound.
+  additional drum machines (a Boss DR55 and Linn Drum MK2) to create a vintage
+  80s [Hi-NRG](/genres/hi-nrg) sound.
 
 # ATTRIBUTION
 author: matt-grey
