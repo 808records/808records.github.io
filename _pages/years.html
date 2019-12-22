@@ -18,14 +18,14 @@ permalink: /years/
 
 {{ site.posts.size }} tracks in total
 
-<div style="height: 300px">
+<div>
   {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
   {% for year in posts_by_year %}
 
     {% assign number_of_tracks_in_year = year.size | times: 10 %}
     {% capture year_percentage %}{{ number_of_tracks_in_year | divided_by: highest_year_count | times: 10 }}{% endcapture %}
     <a href="{{ year.name }}">
-      <div style="position: relative; display: block; float: left; background: #626262; width: 32px; min-height: 50px; margin-right: 2px; height: {{ year_percentage | append: '%' }} ">
+      <div style="position: relative; display: block; background: #626262; height: 32px; min-height: 50px; margin-bottom: 2px; width: {{ year_percentage | append: '%' }} ">
         {{ year.name }} ({{ year.size }})
       </div>
     </a>
