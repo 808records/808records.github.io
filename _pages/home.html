@@ -2,10 +2,20 @@
 layout: default
 permalink: /
 ---
+
+
+<h1>dig through the history of the most iconic drum machine</h1>
+
+<p>the biggest online archive of tracks from 1980 onwards, featuring the ubiquitous and genre defining Roland TR-808</p>
+
+{% assign genres = site.data.genres %}
+{% assign years = site.data.years %}
+{% assign artists = site.posts | group_by_exp:"post", "post.track.artist" %}
+{% assign tracks = site.posts %}
+
 <ul>
-  <li><a href="/tracks">Tracks</a></li>
-  <li><a href="/genres">By Genre</a></li>
-  <li><a href="/authors">By Author</a></li>
-  <li><a href="/years">By Year</a></li>
-  <li><a href="/artists">By Artist</a></li>
+  <li><a href="/genres">{{ genres | size | minus: 1 }} genres</a></li>
+  <li><a href="/years">{{ years | size | minus: 1 }} years</a></li>
+  <li><a href="/artists">{{ artists | size | minus: 1 }} artists</a></li>
+  <li><a href="/tracks">{{ tracks | size | minus: 1 }} tracks</a></li>
 </ul>

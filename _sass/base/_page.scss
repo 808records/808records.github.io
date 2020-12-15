@@ -1,0 +1,27 @@
+::-moz-selection {
+    color: var(--color-text);
+    background: var(--color-highlight);
+}
+
+::selection {
+    color: var(--color-text);
+    background: var(--color-highlight);
+}
+
+html {
+  box-sizing: border-box;
+  background-color: var(--color-background);
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+}

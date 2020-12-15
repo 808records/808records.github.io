@@ -17,7 +17,7 @@ categories:
 
 additional_info: |
   As Matt Davies says in his [Medium article](https://medium.com/@mattdavies2018/the-roland-tr-808-281389a529af)
-  > "The Egypt Lover should really be known as the 808 lover because he owns 6
+  > "The Egypt Lover [sic] should really be known as the 808 lover because he owns 6
   TR-808 Machines."
 
 # ATTRIBUTION

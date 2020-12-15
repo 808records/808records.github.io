@@ -19,8 +19,8 @@
 - title: "Alternative rock"
   slug: alternative-rock
 
-- title: "Ambient house"
-  slug: ambient-house
+# - title: "Ambient house"
+#   slug: ambient-house
 
 - title: "Ambient pop"
   slug: ambient-pop
@@ -142,11 +142,8 @@
 - title: "Post-disco"
   slug: post-disco
 
-- title: "Post-punk"
-  slug: post-punk
-
-- title: "Quiet storm"
-  slug: quiet-storm
+# - title: "Post-punk"
+#   slug: post-punk
 
 - title: "R&B"
   slug: r-b

@@ -3,17 +3,27 @@
 ---
 @charset "utf-8";
 
-@import "variables";
-@import "helpers";
-@import "reset";
-@import "grid";
-@import "site";
-@import "typography";
-@import "animation";
-@import "isotope-grid";
+@import "normalize";
 
-@import "components/site-header";
-@import "components/site-footer";
+@import "base/mixins-functions";
+@import "base/media-queries";
+@import "base/variables";
+@import "base/grid";
+@import "base/extends";
+@import "base/utilities";
+@import "base/typography";
+@import "base/links";
+@import "base/images";
+@import "base/lists";
+@import "base/buttons";
+@import "base/forms";
+@import "base/helpers";
+@import "base/grid";
+@import "base/grid-isotope";
+@import "base/grid-float";
+@import "base/animation";
+@import "base/page";
+
 @import "components/artwork";
 
 @import "layouts/track";

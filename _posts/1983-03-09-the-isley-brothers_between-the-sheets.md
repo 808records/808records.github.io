@@ -13,7 +13,6 @@ track:
   spotify_track_URI: spotify:track:3ApIYu95WxjzpQCnsLBbrv
 
 categories:
-  - Quiet storm
   - R&B
   - Soul
 

@@ -27,8 +27,6 @@
 #   - vendor/ruby/
 
 plugins:
-  - bourbon
-  - neat
   - jekyll-paginate-v2
 
 include:
