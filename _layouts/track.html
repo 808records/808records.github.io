@@ -10,9 +10,10 @@ layout: default
   </div>
 
   <div class="track-layout">
-    <h1 class="track-title">{{ page.track.title }}</h1>
-    <h2 class="track-artist">{{ page.track.artist }}</h2>
-
+    <div class="track-header">
+      <h1 class="track-title type-level-jumbo-2 style-erode">{{ page.track.title }}</h1>
+      <h2 class="track-artist">{{ page.track.artist }}</h2>
+    </div>
     <dl>
       {% if page.track.appears_on %}
         {% if page.track.appears_on.album %}
@@ -71,9 +72,8 @@ layout: default
               allowtransparency="true"
               seamless>
       </iframe>
-    {% endif %}
 
-    {% if page.track.bandcamp %}
+    {% elsif page.track.bandcamp %}
       <iframe class="youtube_embed"
               width="300"
               height="120"
@@ -82,9 +82,8 @@ layout: default
               src="https://bandcamp.com/EmbeddedPlayer/album={{ page.track.bandcamp.album_ID }}/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track={{ page.track.bandcamp.track_ID }}/transparent=true/"
               seamless>
       </iframe>
-    {% endif %}
 
-    {% if page.track.soundcloud_track_ID %}
+    {% elsif page.track.soundcloud_track_ID %}
       {{ prevent_player_interrupt }}
       <iframe class="soundcloud-embed"
               width="300"
@@ -95,18 +94,17 @@ layout: default
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.track.soundcloud_track_ID }}&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
               seamless>
       </iframe>
-    {% endif %}
 
-    {% if page.track.tidal_track_ID %}
+    {% elsif page.track.tidal_track_ID %}
       {{ prevent_player_interrupt }}
       <div class="tidal-embed"
             data-type="t"
             data-id="7597267">
       </div>
       <script src="https://embed.tidal.com/tidal-embed.js"></script>
-    {% endif %}
 
-    {% if page.track.youtube_video_ID %}
+
+    {% elsif page.track.youtube_video_ID %}
       {{ prevent_player_interrupt }}
       <iframe class="youtube-embed"
               width="300"

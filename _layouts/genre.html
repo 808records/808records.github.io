@@ -1,26 +1,32 @@
 ---
-layout: page-with-title
+layout: default
 layout_scope: genre
 ---
 
-<h3>Genre</h3>
-<h1>{{ page.title }}</h1>
+<div class="genre-layout">
+  <div class="genre-header">
+    <a href="/genres"><h3 class="type-level-4">Genres</h3></a>
+    <h1 class="type-level-jumbo-2 style-erode">{{ page.title }}</h1>
+  </div>
 
-{% assign this_genre = page.title %}
+  {% assign this_genre = page.title %}
 
-<ul class="grid">
-  <div class="grid-sizer"></div>
+  <div class="genre-list">
+    <ul class="i-grid">
+      <div class="i-grid-sizer"></div>
 
-  {% for track_entity in site.categories[this_genre] %}
-    <li class="grid-item" data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
-      <a href="{{ track_entity.url }}">
-        <span data-release-artwork class="track-artwork"></span>
-        <span>{{ track_entity.track.title }}</span>
-        <span>{{ track_entity.track.artist }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+      {% for track_entity in site.categories[this_genre] %}
+        <li class="i-grid-item" data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
+          <a href="{{ track_entity.url }}">
+            <span data-release-artwork class="track-artwork"></span>
+            <span>{{ track_entity.track.title }}</span>
+            <span>{{ track_entity.track.artist }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 <script>
   {% include /javascript/artwork.js %}
@@ -28,12 +34,13 @@ layout_scope: genre
 
   {% include /javascript/jQuery.min.js %}
   {% include /javascript/isotope.min.js %}
-  $('.grid').isotope({
-    itemSelector: '.grid-item',
+
+  $('.i-grid').isotope({
+    itemSelector: '.i-grid-item',
     layoutMode: 'fitRows',
     percentPosition: true,
     masonry: {
-      columnWidth: '.grid-sizer',
+      columnWidth: '.i-grid-sizer',
       isFitWidth: true
     }
   });

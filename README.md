@@ -3,20 +3,43 @@ A collaborative interactive site that documents the extensive popularity of the 
 
 ## Setup
 
-- Clone the project locally
-- In terminal, make sure you have Ruby installed and you have run `gem install jekyll bundler`, for more information about installing Jekyll, refer to the [Jekyll website](https://jekyllrb.com/docs/quickstart/)
-- Navigate into the project directory
-- Install Gem dependencies in the by running `bundle install`
-- To run the server in your local environment run `bundle exec jekyll serve` and go to [http://localhost:4000/](http://localhost:4000/) in your browser
-- To compile a static build run `bundle exec jekyll build`
+This site runs on Jekyll, an opensource static site generating platform.
+
+- Clone or download a zip of this project to your computer and navigate to the
+  project directory in your terminal
+  
+- Make sure Ruby is installed, to check if it is, run:
+  ```
+  ruby -v
+  ``` 
+  For more information about installing Ruby, refer to the [Ruby installation ](https://www.ruby-lang.org/en/documentation/installation/).
+
+- Install the Jekyll and bundler [gems](https://jekyllrb.com/docs/ruby-101/#gems) from the commandline:
+  ```
+  gem install jekyll bundler
+  ```
+  For more information about installing Jekyll, refer to the [Jekyll quickstart guide](https://jekyllrb.com/docs/quickstart/)
+
+
+- Install Gem dependencies for the project by running:
+  ```
+  bundle install
+  ```
+  
+- To run the server in your local environment run:
+  ```
+  bundle exec jekyll serve
+  ```
+  
+- Go to http://localhost:8080/ in your browser
 
 ## Content and data
 
 ### Architecture
 - [Tracks](_posts): Published tracks in the form of a post (uses posts directory feature of Jekyll)
 - [Authors](_authors): Authors of posts (published tracks) - uses collection feature of Jekyll
-- [Genres](_data/genres.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [Jekyll data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
-- [Years](_data/years.yml): Year of track release (Uses the [Jekyll data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) gem)
+- [Genres](_data/genres.yml): Genre of tracks (uses category feature of Jekyll in frontmatter and the [Jekyll data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) plugin)
+- [Years](_data/years.yml): Year of track release (Uses the [Jekyll data_page_generator](https://github.com/avillafiorita/jekyll-datapage_gen) plugin)
 
 #### Track posts are grouped by:
 - **Tracks:** In chronological order of publishing date, paginated
@@ -31,9 +54,13 @@ A collaborative interactive site that documents the extensive popularity of the 
   - Spotify URI (`spotify_track_URI`)
   - Bandcamp track ID and album ID (`album_ID` `track_ID`)
   - Soundcloud track ID (`soundcloud_track_ID`)
-  - Tidal track ID (`tidal_track_ID`)
   - Youtube video ID (`youtube_video_ID`)
+  - Tidal track ID (`tidal_track_ID`)
 
-## Contributers
-- [Matt Grey](himatt.com) - Design, UX, Jekyll templating (CSS, HTML, Liquid) and site architecture
-- Alex Winter - Javascript
+## Licenses
+
+### Underlying source code
+
+Under the [GNU General Public License v3.0](LICENSE), you can adapt and use the source code of this site (but not it's content) for personal and commercial use, so long as you retain the same license for your own project. See a quick breakdown of what you can and cant do [here](https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3))
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)

@@ -11,6 +11,7 @@ track:
     single: Voodoo Ray
     discogs_release_ID: 64961
   wikipedia_URL: //en.wikipedia.org/wiki/Voodoo_Ray
+  spotify_track_URI: spotify:track:5gjRugpcrpgRffrheTbQYT
   bandcamp:
     album_ID: 2695344595
     track_ID: 329269535

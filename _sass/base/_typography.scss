@@ -1,9 +1,16 @@
-$font-family-primary: 'Inter', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-$font-family-secondary: 'Inter', serif;
+$font-family-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+
+:root { font-family: 'Inter', #{$font-family-fallback}; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', #{$font-family-fallback}; }
+}
+
+h1,h2,h3,h4,h5,h6 { font-family: 'InterDisplay', sans-serif; }
+@supports (font-variation-settings: normal) {
+  h1,h2,h3,h4,h5,h6 { font-family: 'InterDisplay var', sans-serif; }
+}
 
 html {
-  font-family: sans-serif;
-  font-family: $font-family-primary;
   font-size: var(--font-size-root);
   color: var(--color-text);
   line-height: var(--line-height-regular);
@@ -13,32 +20,35 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd {
-  font-weight: 400;
   padding: 0;
   margin: 0;
 }
 
-.type-level-jumbo {
-  font-family: $font-family-secondary;
-  font-size: var(--font-size-level-jumbo);
-  line-height: var(--line-height-tiny);
-}
+.style-erode { filter: url('#erode'); }
 
-.type-level-1 {
-  font-family: $font-family-secondary;
-  font-size: var(--font-size-level-1);
+.type-level-jumbo {
+  font-size: var(--font-size-level-jumbo);
+  font-weight: var(--font-weight-title);
   line-height: var(--line-height-tight);
 }
 
+.type-level-jumbo-2 {
+  font-size: var(--font-size-level-jumbo-2);
+  font-weight: var(--font-weight-title);
+  line-height: var(--line-height-tight);
+}
+
+.type-level-1 {
+  font-size: var(--font-size-level-1);
+  font-weight: var(--font-weight-title);
+}
+
 .type-level-2 {
-  font-family: $font-family-secondary;
   font-size: var(--font-size-level-2);
-  line-height: var(--line-height-tiny);
 }
 
 .type-level-3 {
   font-size: var(--font-size-level-3);
-  line-height: var(--line-height-tight);
 }
 
 .type-level-4 {
@@ -78,7 +88,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd {
 .paragraph-huge p {
   margin-bottom: var(--paragraph-spacing);
   font-size: var(--font-size-body-huge);
-  line-height: var(--line-height-slight);
 
   a { border-bottom-width: 2px }
 }

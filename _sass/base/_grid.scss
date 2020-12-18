@@ -24,6 +24,10 @@
   @include grid-base;
 }
 
+.grid-container-nested-small { //Use for extend
+  @include grid-container-nested-small;
+}
+
 @mixin grid-container-nested-big {
   @include grid-base;
 
@@ -32,15 +36,11 @@
   }
 }
 
-.grid-container-nested-small { //Use for extend
-  @include grid-container-nested-small;
-}
-
 .grid-container-nested-big { //Use for extend
   @include grid-container-nested-big;
 }
 
-@mixin grid-column-from-to($from: 1, $to: 12,) {
+@mixin grid-column-from-to($from: 1, $to: 12) {
   grid-column: #{$from} / #{($to + 1)};
 }
 

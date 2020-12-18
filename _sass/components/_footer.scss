@@ -1,0 +1,11 @@
+.footer {
+    @extend .grid-container;
+
+    .footer-content {
+        @include grid-column(6);
+
+        @include grid-media(tablet) {
+          @include grid-column(12);
+        }
+    }
+}

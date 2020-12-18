@@ -1,16 +1,16 @@
-.grid {
+.i-grid {
   list-style: none;
-  margin-left: calc(#{var(--gutter)} * -1);;
-  margin-right: calc(#{var(--gutter)} * -1);;
+  margin-left: calc(#{var(--gutter)} / -1);
+  margin-right: calc(#{var(--gutter)} / -1);
 
   @include grid-media(desktop) {
-    margin-left: calc(#{var(--gutter)} * -2);
-    margin-right: calc(#{var(--gutter)} * -2);
+    margin-left: calc(#{var(--gutter)} / -2);
+    margin-right: calc(#{var(--gutter)} / -2);
   }
 }
 
-.grid-item,
-.grid-sizer {
+.i-grid-item,
+.i-grid-sizer {
   width: 50%;
 
   @include grid-media(tablet) {
@@ -18,16 +18,20 @@
   }
 
   @include grid-media(desktop) {
-    width: 33.333333%;
+    width: 25%;
   }
 }
 
-.grid-item {
+.i-grid-item {
   float: left;
   height: auto;
   padding: var(--gutter);
 
   @include grid-media(desktop) {
-    padding: calc(#{var(--gutter)} * 2);
+    padding: calc(#{var(--gutter)} / 2);
   }
+}
+
+.i-grid-item-animate {
+  transition: width 0.4s, height 0.4s;
 }

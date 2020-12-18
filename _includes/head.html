@@ -21,8 +21,10 @@
 
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/css/styles.css" | prepend: site.baseurl }}">
+  <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+  <link href="https://rsms.me/inter/inter-display.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{{ '/css/styles.css' | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   {% if page.sitemap == false %}<meta name="robots" content="nofollow, noindex"/>{% endif %}
   <link rel="alternate" type="application/rss+xml" title="808states track RSS feed" href="/feed.xml">
