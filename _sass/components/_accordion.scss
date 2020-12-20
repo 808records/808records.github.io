@@ -1,0 +1,19 @@
+.accordion-container {
+    .accordion-title {
+        display: block;
+    }
+
+    .accordion-content {
+        display: none;
+    }
+}
+
+.accordion-container.active {
+    .accordion-title {
+        color: red;
+    }
+
+    .accordion-content {
+        display: block;
+    }
+}

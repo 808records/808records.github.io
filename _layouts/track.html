@@ -10,10 +10,13 @@ layout: default
   </div>
 
   <div class="track-layout">
-    <div class="track-header">
-      <h1 class="track-title type-level-jumbo-2 style-erode">{{ page.track.title }}</h1>
-      <h2 class="track-artist">{{ page.track.artist }}</h2>
+    <div class="year-header">
+      <div class="page-header">
+        <h1 class="type-level-2 text-style-erode">{{ page.track.title }}</h1>
+        <h2 class="track-artist">{{ page.track.artist }}</h2>
+      </div>
     </div>
+
     <dl>
       {% if page.track.appears_on %}
         {% if page.track.appears_on.album %}

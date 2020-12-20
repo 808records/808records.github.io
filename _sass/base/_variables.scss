@@ -1,5 +1,5 @@
 :root {
-  --font-size-root: 16px;
+  --font-size-root: 100%; //16
 
   --line-height-regular: 1.5;
   --line-height-tight: 1.05;
@@ -23,6 +23,7 @@
   --font-size-level-2: var(--font-size-xxxlarge);
   --font-size-level-3: var(--font-size-xxlarge);
   --font-size-level-4: var(--font-size-large);
+  --font-size-level-5: var(--font-size-normal);
   --font-size-body: var(--font-size-large);
   --font-size-body-tiny: var(--font-size-xsmall);
   --font-size-body-small: var(--font-size-normal);
@@ -34,9 +35,11 @@
   --font-size-nav: var(--font-size-xlarge);
 
   --font-weight-title: 800;
-  --font-weight-body: 400;
+  --font-weight-body: 450;
+  --font-weight-body-medium: 500;
+  --font-weight-body-bold: 700;
 
-  --font-letter-spacing-subtle: .06rem;
+  --font-letter-spacing-subtle: .03rem;
 
   --paragraph-spacing: 1.3rem;
 
@@ -48,20 +51,21 @@
   --page-border-width: #{rem(2px)};
 
   --inner-padding: #{rem(16px)};
-  --inner-padding-horizontal: #{rem(10px)};
+  --inner-padding-horizontal: #{rem(8px)};
+
+  --component-padding-ud: #{rem(8px)};
+  --component-padding-lr: #{rem(12px)};
 
   --color-808-red: 200,50,22; // #c83216
-  --color-808-yellow: 218,222,0; // #dade00
   --color-808-orange: 249,75,0; // #f94b00
+  --color-808-yellow: 218,222,0; // #dade00
   --color-808-beige: 230,233,191; // #e6e9bf
+  --color-808-gray: 121,130,130; // #798282
 
   --color-primary: 245,246,227;
   --color-secondary: 23,16,16;
   --color-tertiary: 0,0,255;
-  --color-action: rgba(var(--color-808-orange));
-
-  --color-highlight-rgb: var(--color-808-red);
-  --color-highlight: rgb(var(--color-highlight-rgb));
+  --color-action: rgb(var(--color-808-orange));
 
   --color-background: rgba(var(--color-secondary), 1);
   --color-background-rgb: var(--color-secondary);
@@ -88,6 +92,7 @@
     --font-size-body-large: var(--font-size-xxlarge);
     --font-size-body-huge: var(--font-size-xxxlarge);
 
+    --gutter: #{rem(32px)};
     --page-margin: #{rem(64px)};
     --page-margin-horizontal: #{rem(64px)};
     
@@ -97,41 +102,24 @@
 
 @include grid-media(desktop) {
   :root {
-    --font-size-root: 17px;
+    --font-size-root: 106.25%; //17
     --font-size-level-jumbo: var(--font-size-xxxxxxlarge);
     --font-size-level-jumbo-2: var(--font-size-xxxxxlarge);
     --font-size-body: var(--font-size-xlarge);
     --font-size-body-large: var(--font-size-xxlarge-2);
     --font-size-body-huge: var(--font-size-xxxxlarge);
 
-    --gutter: #{rem(32px)};
+    --gutter: #{rem(48px)};
     --gutter-row: #{rem(32px)};
   }
 }
 
 @include grid-media(largedesktop) {
   :root {
-    --font-size-root: 20px;
-    --page-margin: #{rem(128px)};
+    --font-size-root: 125%; //20
+    --page-margin: #{rem(64px)};
     --page-margin-horizontal: #{rem(64px)};
   }
 }
-
-/*
- * GEOMETRY
- */
-
-//Base
-$measure-xxxsmall: rem(4px);
-$measure-xxsmall: rem(8px);
-$measure-xsmall: rem(12px);
-$measure-small: rem(20px);
-$measure-normal: rem(28px);
-$measure-medium: rem(32px);
-$measure-large: rem(64px);
-
-/*
- * GEOMETRY
- */
 
 $timing-interaction: .2s;

@@ -28,4 +28,13 @@
 
 .header { 
   padding-top: var(--page-margin-horizontal);
+  padding-bottom: var(--page-margin-horizontal);
+}
+
+a.site-logo {
+  display: inline-block;
+
+  &:hover {
+    border-bottom: 2px solid var(--color-action);
+  }
 }

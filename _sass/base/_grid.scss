@@ -8,8 +8,11 @@
 
 @mixin grid-container {
   @include grid-base;
-  margin-left: var(--page-margin);
-  margin-right: var(--page-margin);
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 2000px;
 
   @include grid-media(tablet) {
     grid-template-columns: repeat(12, 1fr);

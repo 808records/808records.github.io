@@ -9,3 +9,29 @@
         }
     }
 }
+
+.footer {
+  padding-top: var(--page-margin-horizontal);
+  padding-bottom: var(--page-margin-horizontal);
+  opacity: .7;
+}
+
+.footer-content {
+  text-transform: uppercase;
+  background-color: rgb(var(--color-808-gray));
+  border-radius: 6px;
+  padding: var(--component-padding-ud) var(--component-padding-lr);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-body-medium);
+  letter-spacing: var(--font-letter-spacing-subtle);
+
+  p, a {
+    color: var(--color-background);
+  }
+}
+
+.footer-content-keyline-bottom {
+  border-bottom: 1px solid;
+  padding-bottom: rem(4px);
+  margin-bottom: rem(4px);
+}

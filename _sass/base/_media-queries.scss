@@ -1,4 +1,4 @@
-  @mixin grid-media($device-size: phablet) {
+@mixin grid-media($device-size: phablet) {
   $phablet-size: 480px;
   $tablet-size: 768px;
   $desktop-size: 1260px;

@@ -1,13 +1,12 @@
 ::-moz-selection {
-    color: var(--color-text);
-    background: var(--color-highlight);
+    color: black;
+    background: white;
 }
 
 ::selection {
-    color: var(--color-text);
-    background: var(--color-highlight);
+    color: black;
+    background: white;
 }
-
 
 html {
   box-sizing: border-box;
@@ -24,6 +23,9 @@ body {
   border-width: var(--page-border-width);
   border-style: solid;
   border-color: var(--color-secondary);
+
+  // border-left: 40px solid var(--color-background);
+  // border-right: 40px solid var(--color-background);
 }
 
 *, *:before, *:after {
@@ -39,7 +41,7 @@ img {
 }
 
 .noise { 
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;

@@ -6,7 +6,7 @@ permalink: /
 <div class="home-layout">
 
   <div class="home-intro">
-    <h1 class="home-title type-level-jumbo style-erode">dig through the history of the most iconic drum machine</h1>
+    <h1 class="home-title type-level-jumbo text-style-erode">dig through the history of the most iconic drum machine</h1>
     <p class="type-level-3">the biggest online archive of tracks featuring the ubiquitous and genre defining Roland TR-808, from 1980 onwards</p>
   </div>
 
@@ -16,11 +16,12 @@ permalink: /
     {% assign artists = site.posts | group_by_exp:"post", "post.track.artist" %}
     {% assign tracks = site.posts %}
 
-    <ul>
-      <li><a href="/genres">{{ genres | size | minus: 1 }} genres</a></li>
-      <li><a href="/years">{{ years | size | minus: 1 }} years</a></li>
-      <li><a href="/artists">{{ artists | size | minus: 1 }} artists</a></li>
-      <li><a href="/tracks">{{ tracks | size | minus: 1 }} tracks</a></li>
+    <h3 class="type-level-4">Explore</h3>
+    <ul class="navigation-list underlined-link-on-hover">
+      <li><a href="/genres">{{ genres | size | minus: 1 }} genres &rarr;</a></li>
+      <li><a href="/years">{{ years | size | minus: 1 }} years &rarr;</a></li>
+      <li><a href="/artists">{{ artists | size | minus: 1 }} artists &rarr;</a></li>
+      <li><a href="/tracks">{{ tracks | size | minus: 1 }} tracks &rarr;</a></li>
     </ul>
   </div>
   

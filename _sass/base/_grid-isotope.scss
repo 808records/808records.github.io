@@ -22,6 +22,11 @@
   }
 }
 
+.i-grid-item-fullwidth,
+.i-grid-sizer-fullwidth {
+  width: 100%;
+}
+
 .i-grid-item {
   float: left;
   height: auto;

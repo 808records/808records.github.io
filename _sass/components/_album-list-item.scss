@@ -1,0 +1,42 @@
+.album-list-item {
+    text-decoration: none;
+
+    &:hover {
+        &::before {
+            content: '';
+            position: absolute;
+            // left: calc(#{var(--gutter)} / 2);
+            // right: calc(#{var(--gutter)} / 2);
+            top: 0;
+            bottom: 0;
+            border-bottom: 2px solid var(--color-action);
+        }
+    }
+
+    .album-list-item-meta-primary,
+    .album-list-item-meta-secondary,
+    .album-list-item-meta-tertiary {
+        display: block;
+    }
+
+    .album-list-item-meta-primary {
+        @extend .format, .underlined-link-on-hover;
+        @extend .type-level-4;
+        font-weight: var(--font-weight-body-bold);
+        margin-top: rem(12px);
+    }
+
+    .album-list-item-meta-secondary {
+        @extend .type-level-5;
+        color: var(--color-text);
+        margin-top: rem(4px);
+    }
+
+    .album-list-item-meta-tertiary {
+        @extend .text-emphasis-secondary;
+        font-size: var(--font-size-xsmall);
+        color: var(--color-text);
+        margin-top: rem(4px);
+    }
+
+}

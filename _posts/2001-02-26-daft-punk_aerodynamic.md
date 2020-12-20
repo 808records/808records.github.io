@@ -14,6 +14,7 @@ track:
 
 categories:
   - House
+  - French house
 
 # ATTRIBUTION
 author: matt-grey

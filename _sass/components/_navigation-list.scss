@@ -1,0 +1,8 @@
+.navigation-list {
+    list-style: none;
+    
+    a {
+        font-size: var(--font-size-level-2);
+        border-bottom-width: rem(2px);
+    }
+}

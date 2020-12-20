@@ -10,7 +10,7 @@ track:
   appears_on:
     album: Kasso
     discogs_release_ID: 868859
-  spotify_track_URI: spotify:track:79piJ9I8OjRsisr75gvPsE
+  spotify_track_URI: spotify:track:6k7Lh9lHm5ACNkrFTEbw2j
 
 categories:
   - Italo disco

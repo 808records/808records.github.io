@@ -23,9 +23,27 @@
 }
 
 .home-title {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 .home-intro {
     padding-bottom: 1rem;
+}
+
+.sequencer {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-auto-rows: auto;
+    grid-column-gap: var(--gutter);
+    grid-row-gap: var(--gutter-row);
+    width: 100%;
+    
+    .sequencer-key {
+        .red { background: var(--color-808-red);}
+        .orange { background: var(--color-808-orange);}
+        .yellow { background: var(--color-808-yellow);}
+        .beige { background: var(--color-808-beige);}
+    }
+
+    
 }

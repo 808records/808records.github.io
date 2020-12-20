@@ -9,7 +9,8 @@ track:
   appears_on:
     compilation: Musik For Autobahns
     discogs_release_ID: 4359098
-  spotify_track_URI: spotify:track:3BnVhpKHB4z7EqxgvdeEu8
+  # spotify_track_URI: spotify:track:3BnVhpKHB4z7EqxgvdeEu8
+  youtube_video_ID: 8u33UE6zkhs
 
 categories:
   - IDM

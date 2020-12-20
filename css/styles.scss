@@ -27,9 +27,13 @@
 @import "components/header";
 @import "components/footer";
 @import "components/artwork";
+@import "components/page-header";
+@import "components/navigation-list";
+@import "components/album-list-item";
+@import "components/accordion";
 
 @import "layouts/track";
-// @import "layouts/year";
+@import "layouts/year";
 @import "layouts/genre";
 // @import "layouts/author";
 

@@ -17,14 +17,13 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-weight: var(--font-weight-body);
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd {
   padding: 0;
   margin: 0;
 }
-
-.style-erode { filter: url('#erode'); }
 
 .type-level-jumbo {
   font-size: var(--font-size-level-jumbo);
@@ -53,6 +52,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd {
 
 .type-level-4 {
   font-size: var(--font-size-level-4);
+  line-height: var(--line-height-tiny);
+}
+
+.type-level-5 {
+  font-size: var(--font-size-level-5);
+  line-height: var(--line-height-tiny);
 }
 
 .title-label {
@@ -97,3 +102,11 @@ figcaption {
   font-size: var(--font-size-body-tiny);
   line-height: var(--line-height-tiny);
 }
+
+// .text-style-erode { filter: url('#erode'); }
+.text-emphasis-secondary { opacity: 0.5; }
+
+.font-weight-title { font-weight: var(--font-weight-title); }
+.font-weight-body { font-weight: var(--font-weight-body); }
+.font-weight-body-medium { font-weight: var(--font-weight-body-medium); }
+.font-weight-body-bold { font-weight: var(--font-weight-body-bold); }

@@ -8,7 +8,7 @@ track:
   artist: George Fitzgerald
   appears_on:
     ep: Burns
-    discogs_release_ID: 11280867
+    discogs_release_ID: 11546482
   wikipedia_URL: //en.wikipedia.org/wiki/George_FitzGerald_(musician)
   spotify_track_URI: spotify:track:0selYyeuPFayoIaL23PNbP
 

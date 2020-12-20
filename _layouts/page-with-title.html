@@ -1,14 +1,11 @@
 ---
 layout: default
 ---
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-24"></div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-24">{{ content }}</div>
+<div class="page-with-title-layout">
+  <div class="page-with-title-header">
+    <h1 class="type-level-jumbo-2 text-style-erode">{{ page.title }}</h1>
   </div>
-</div> -->
+</div>
 
-{{ content }}
+{{ content | markdownify }}

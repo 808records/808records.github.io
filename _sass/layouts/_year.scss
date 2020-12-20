@@ -1,0 +1,12 @@
+.year-layout {
+    @extend .grid-container;
+
+    .year-header {
+        @include grid-column(12);
+    }
+
+    .year-list {
+        @include grid-column(12);
+    }
+
+}
