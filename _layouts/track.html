@@ -12,8 +12,10 @@ layout: default
   <div class="track-layout">
     <div class="year-header">
       <div class="page-header">
+        <button onclick="history.back(-1)">&larr;</button>
+
         <h1 class="type-level-2 text-style-erode">{{ page.track.title }}</h1>
-        <h2 class="track-artist">{{ page.track.artist }}</h2>
+        <h2 class="track-artist"><a href="/artists#{{ page.track.artist | slugify | remove: '-' }}">{{ page.track.artist }}</a></h2>
       </div>
     </div>
 

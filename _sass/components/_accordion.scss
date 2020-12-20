@@ -1,4 +1,5 @@
-.accordion-container {
+.accordion-container,
+.accordion-container:not(:target) {
     .accordion-title {
         display: block;
     }
@@ -8,7 +9,8 @@
     }
 }
 
-.accordion-container.active {
+.accordion-container.active,
+.accordion-container:target {
     .accordion-title {
         color: red;
     }
