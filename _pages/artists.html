@@ -7,27 +7,36 @@ published: true
 
 {% assign posts_by_artist = site.posts | sort: 'track.artist' | group_by_exp:"post", "post.track.artist" %}
 
-<div class="accordion-artist">
-
-  {% for artist in posts_by_artist %}
-  {% assign this_artist = artist.name %}
-  <div class="accordion-container" id="{{ artist.name | slugify | remove: '-' }}">
-    <button class="accordion-title">
-      <span class="type-level-3">{{ artist.name }}</span>
-      <span>{{ artist.size | pluralize: 'track', 'tracks' }}</span>
-    </button>
-
-    {% assign artist_tracks = artist.items | sort: 'track.title'%}
-    <div class="accordion-content">
-      {% for track_entity in artist_tracks %}
-        <ul>
-          <li><a class="underlined-link-on-hover" href="/tracks/{{ track_entity.slug }}">{{ track_entity.track.title }}</a></li>
-        </ul>
-      {% endfor %}
+<div class="artists-layout">
+  
+  <div class="artists-header">
+    <div class="page-header">
+      <h1 class="page-header-title type-level-jumbo-2 text-style-erode">Artists</h1>
     </div>
   </div>
-  {% endfor %}
 
+  <div class="artists-list">
+
+    {% for artist in posts_by_artist %}
+    {% assign this_artist = artist.name %}
+    <div class="accordion-container" id="{{ artist.name | slugify | remove: '-' }}">
+      <button class="accordion-title">
+        <span class="type-level-3">{{ artist.name }}</span>
+        <span>{{ artist.size | pluralize: 'track', 'tracks' }}</span>
+      </button>
+
+      {% assign artist_tracks = artist.items | sort: 'track.title'%}
+      <div class="accordion-content">
+        {% for track_entity in artist_tracks %}
+          <ul>
+            <li><a class="underlined-link-on-hover" href="/tracks/{{ track_entity.slug }}">{{ track_entity.track.title }}</a></li>
+          </ul>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
 </div>
 
 <script>
