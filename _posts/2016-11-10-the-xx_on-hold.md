@@ -14,7 +14,7 @@ track:
 
 categories:
   - Indie pop
-  - Synth pop
+  - Synth-pop
   - Ambient pop
 
 # ATTRIBUTION

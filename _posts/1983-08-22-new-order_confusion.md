@@ -14,7 +14,7 @@ track:
 
 categories:
   - Electro
-  - Synth pop
+  - Synth-pop
 
 # ATTRIBUTION
 author: alex-winter

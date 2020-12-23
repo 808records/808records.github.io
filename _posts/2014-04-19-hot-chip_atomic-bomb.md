@@ -15,7 +15,7 @@ track:
 categories:
   - Afrobeat
   - Disco
-  - Folk, World, & Country
+  - Folk & World
   - Funk
 
 # ATTRIBUTION

@@ -16,7 +16,7 @@ categories:
   - Indie electronic
   - House
   - Electro
-  - Synth pop
+  - Synth-pop
 
 # ATTRIBUTION
 author: matt-grey

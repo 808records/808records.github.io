@@ -13,7 +13,7 @@ track:
   spotify_track_URI: spotify:track:4ePUfaXtRkd3Oi25b8OSMA
 
 categories:
-  - Synth pop
+  - Synth-pop
   - New wave
 
 # ATTRIBUTION

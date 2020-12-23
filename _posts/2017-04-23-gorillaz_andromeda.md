@@ -14,7 +14,7 @@ track:
 
 categories:
   - House
-  - Synth pop
+  - Synth-pop
   - Disco
 
 # ATTRIBUTION

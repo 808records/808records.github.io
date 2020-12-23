@@ -13,7 +13,7 @@ track:
   spotify_track_URI: spotify:track:25SQI7rcz4fcSJpQg5Ut8J
 
 categories:
-  - Synth pop
+  - Synth-pop
   - New wave
 
 # ATTRIBUTION

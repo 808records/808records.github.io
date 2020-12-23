@@ -14,7 +14,7 @@ track:
 
 categories:
   - Techno
-  - Synth pop
+  - Synth-pop
   - Indie pop
 
 # ATTRIBUTION

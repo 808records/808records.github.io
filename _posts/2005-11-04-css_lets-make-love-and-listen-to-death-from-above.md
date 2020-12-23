@@ -14,7 +14,7 @@ track:
 
 categories:
   - Electroclash
-  - Synth pop
+  - Synth-pop
   - New wave
 
 # ATTRIBUTION

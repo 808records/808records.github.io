@@ -11,7 +11,7 @@ permalink: /
   </div>
 
   <div class="home-links">
-    {% assign genres = site.data.genres %}
+    {% assign genres = site.categories %}
     {% assign years = site.data.years %}
     {% assign artists = site.posts | group_by_exp:"post", "post.track.artist" %}
     {% assign tracks = site.posts %}

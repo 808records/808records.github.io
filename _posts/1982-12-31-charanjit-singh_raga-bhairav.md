@@ -14,9 +14,9 @@ track:
 
 categories:
   - Disco
-  - Indian classical
+  - Classical
   - Acid house
-  - Folk, World, & Country
+  - Folk & World
 
 additional_info: |
   Singh's album "Synthesizing: Ten Ragas to a Disco Beat" is retrospectively

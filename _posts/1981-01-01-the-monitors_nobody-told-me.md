@@ -15,7 +15,7 @@ track:
 
 categories:
   - New wave
-  - Synth pop
+  - Synth-pop
 
 # ATTRIBUTION
 author: matt-grey

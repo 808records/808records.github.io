@@ -4,14 +4,17 @@ title: Genres
 permalink: /genres/
 ---
 
+<h2>Categories</h2>
 <ul>
-{% for genre_entity in site.data.genres  %}
-  {% assign this_genre = genre_entity.title %}
-  <li>
-    <a class="link-tile" href="{{ genre_entity.title | slugify }}">
-     <span>{{ genre_entity.title }}</span>
-     <span>{{ site.categories[this_genre] | size }}</span>
-    </a>
-  </li>
-{% endfor %}
-<ul>
+{% assign categories_list = site.categories | sort %}
+  {% if categories_list.first[0] == null %}
+    {% for category in categories_list %}
+      <li><a href="{{ category | slugify }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a></li>
+    {% endfor %}
+  {% else %}
+    {% for category in categories_list %}
+      <li><a href="{{ category[0] | slugify }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a></li>
+    {% endfor %}
+  {% endif %}
+{% assign categories_list = nil %}
+</ul>
