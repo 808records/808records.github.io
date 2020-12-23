@@ -7,7 +7,7 @@ track:
   title: Burns
   artist: George Fitzgerald
   appears_on:
-    ep: Burns
+    ep: Eating Glue
     discogs_release_ID: 11546482
   wikipedia_URL: //en.wikipedia.org/wiki/George_FitzGerald_(musician)
   spotify_track_URI: spotify:track:0selYyeuPFayoIaL23PNbP

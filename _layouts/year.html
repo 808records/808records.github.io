@@ -33,12 +33,23 @@ layout_scope: year
       <div class="i-grid-sizer"></div>
 
       {% for track_entity in tracks %}
+
+        {% capture release_date %}
+        {% if track_entity.release_date_approximation == 'year' %}
+          {{ track_entity.date | date: '%Y' }}
+        {% elsif track_entity.release_date_approximation == 'month' %}
+          {{ track_entity.date | date: '%B %Y' }}
+        {% else %}
+          {{ track_entity.date | date: '%-d %B %Y' }}
+        {% endif %}
+        {% endcapture %}
+
         <li class="i-grid-item" data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
           <a class="album-list-item" href="/tracks/{{ track_entity.slug }} ">
             <span data-release-artwork class="track-artwork"></span>
             <span class="album-list-item-meta-primary">{{ track_entity.track.title }}</span>
             <span class="album-list-item-meta-secondary">{{ track_entity.track.artist }}</span>
-            <span class="album-list-item-meta-tertiary">{{ track_entity.date | date: "%-d %b %Y" }}</span>
+            <span class="album-list-item-meta-tertiary">{{ release_date }}</span>
           </a>
         </li>
       {% endfor %}
