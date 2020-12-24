@@ -65,7 +65,7 @@
   --color-primary: 245,246,227;
   --color-secondary: 23,16,16;
   --color-tertiary: 0,0,255;
-  --color-action: rgb(var(--color-808-orange));
+  --color-action: var(--color-808-orange);
 
   --color-background: rgba(var(--color-secondary), 1);
   --color-background-rgb: var(--color-secondary);
@@ -75,7 +75,7 @@
   --color-form-background: rgba(var(--color-primary),.95);
   --color-text-inverted: rgba(var(--color-secondary),.95);
 
-  --color-cta: var(--color-action);
+  --color-cta: rgb(var(--color-action));
 
   --color-rgb-opacity-tint-light: .1;
   --color-rgb-opacity-tint-mid: .6;

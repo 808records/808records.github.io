@@ -3,10 +3,43 @@
     align-items: center;
     gap: var(--gutter);
     text-decoration: none;
+
+padding: var(--gutter);
+  margin-bottom: 0;
+
+  @include grid-media(desktop) {
+    padding: calc(#{var(--gutter)} / 2);
+  }
     
     .track-artwork-container {
         min-width: 92px;
         align-self: stretch;
+    }
+    
+    .track-artwork {
+        background-color: var(--color-cta);
+    }
+
+    &:hover, 
+    &:focus {
+        outline: 0;
+        
+        .track-artwork {
+            background-blend-mode: luminosity;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            // border: 2px solid var(--color-cta);
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 12px;
+            background: rgba(var(--color-action), .08);
+            z-index: -1;
+        }
     }
 
     .album-list-item-meta {

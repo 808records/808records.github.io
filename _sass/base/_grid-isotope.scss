@@ -30,12 +30,7 @@
 .i-grid-item {
   float: left;
   height: auto;
-  padding: var(--gutter);
   margin-bottom: 0;
-
-  @include grid-media(desktop) {
-    padding: calc(#{var(--gutter)} / 2);
-  }
 }
 
 .i-grid-item-animate {
