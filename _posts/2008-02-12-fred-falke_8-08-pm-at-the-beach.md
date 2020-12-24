@@ -4,7 +4,7 @@ published_date: 2017-10-23
 
 # SONG
 track:
-  title: "8:08pm @ The Beach"
+  title: "808 PM At The Beach"
   artist: Fred Falke
   appears_on:
     ep: Music For My Friends

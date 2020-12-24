@@ -1,16 +1,15 @@
 .album-list-item {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter);
     text-decoration: none;
+    
+    .track-artwork-container {
+        min-width: 92px;
+        align-self: stretch;
+    }
 
-    &:hover {
-        &::before {
-            content: '';
-            position: absolute;
-            // left: calc(#{var(--gutter)} / 2);
-            // right: calc(#{var(--gutter)} / 2);
-            top: 0;
-            bottom: 0;
-            border-bottom: 2px solid var(--color-action);
-        }
+    .album-list-item-meta {
     }
 
     .album-list-item-meta-primary,
@@ -20,10 +19,10 @@
     }
 
     .album-list-item-meta-primary {
-        @extend .format, .underlined-link-on-hover;
+        @extend .format, .plain-link;
         @extend .type-level-4;
         font-weight: var(--font-weight-body-bold);
-        margin-top: rem(12px);
+        margin-top: -2px;
     }
 
     .album-list-item-meta-secondary {
@@ -38,5 +37,20 @@
         color: var(--color-text);
         margin-top: rem(4px);
     }
+}
 
+
+@include grid-media(tablet) {
+    .album-list-item {
+        display: block;
+
+        .track-artwork-container {
+            min-width: 100%;
+        }
+    
+        .album-list-item-meta {
+        }
+    
+        .album-list-item-meta-primary { margin-top: rem(12px); }
+    }
 }

@@ -7,7 +7,7 @@
     {% if page.layout == 'track' %}
       <title>{{ page.track.title | escape }} by {{ page.track.artist | escape }} | Tracks | {{ site.title | escape }}</title>
     {% elsif page.layout_scope == 'genre' %}
-      <title>{{ page.title | escape }} | Genres | {{ site.title | escape }}</title>
+      <title>{% if page.autopages %}{{page.autopages.display_name}}{% else %}{{ page.title | escape }}{% endif %} tracks{% if paginator.total_pages > 1 %} - Page {{page.pagination_info.curr_page}}{% endif %} | Genres | {{ site.title | escape }}</title>
     {% elsif page.layout_scope == 'year' %}
       <title>{{ page.title | escape }} | Years | {{ site.title | escape }}</title>
     {% elsif page.layout == 'author' %}

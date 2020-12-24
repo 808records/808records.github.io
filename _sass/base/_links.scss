@@ -22,6 +22,16 @@ a.underlined-link-on-hover,
   &:hover { border-bottom-color: var(--color-cta); }
 }
 
+.plain-link a,
+a.plain-link,
+.format.plain-link {
+  text-decoration: none;
+  color: var(--color-cta);
+  border-bottom: rem(1px) solid;
+  border-bottom-color: transparent;
+}
+
+
 h1, h2, h3, h4 { 
   a:hover {
     border-bottom-width: rem(2px);

@@ -43,12 +43,12 @@
 
   --paragraph-spacing: 1.3rem;
 
-  --gutter: #{rem(24px)};
+  --gutter: #{rem(16px)};
   --gutter-row: #{rem(24px)};
-  --page-margin: #{rem(32px)};
+  --page-margin: #{rem(16px)};
   --page-margin-horizontal: #{rem(32px)};
 
-  --page-border-width: #{rem(2px)};
+  --page-border-width: 0;
 
   --inner-padding: #{rem(16px)};
   --inner-padding-horizontal: #{rem(8px)};

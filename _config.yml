@@ -128,7 +128,7 @@ pagination:
   collection: 'posts'
 
   # How many objects per paginated page, used to be `paginate` (default: 0, means all)
-  per_page: 9
+  per_page: 8
 
   # The permalink structure for the paginated pages (this can be any level deep)
   permalink: '/page/:num/' # Pages are index.html inside this folder (default)
@@ -136,7 +136,7 @@ pagination:
   #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
 
   # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
-  title: ':title - page :num'
+  title: ':title - Page :num'
 
   # Limit how many pagenated pages to create (default: 0, means all)
   limit: 0
@@ -183,9 +183,9 @@ autopages:
   categories: 
     # Optional, the list of layouts that should be processed for every category found in the site
     layouts: 
-      - 'autopage_collection.html'
+      - 'genre.html'
     # Optional, the title that each category paginate page should get (:cat is replaced by the Category name)
-    title: 'Posts with genre :cat'
+    title: ':cat tracks'
     # Optional, the permalink for the  pagination page (:cat is replaced), 
     # the pagination permalink path is then appended to this permalink structure
     permalink: '/genres/:cat'

@@ -46,10 +46,14 @@ layout_scope: year
 
         <li class="i-grid-item" data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
           <a class="album-list-item" href="/tracks/{{ track_entity.slug }} ">
-            <span data-release-artwork class="track-artwork"></span>
-            <span class="album-list-item-meta-primary">{{ track_entity.track.title }}</span>
-            <span class="album-list-item-meta-secondary">{{ track_entity.track.artist }}</span>
-            <span class="album-list-item-meta-tertiary">{{ release_date }}</span>
+            <span class="track-artwork-container">
+              <span data-release-artwork class="track-artwork"></span>
+            </span>
+            <span class="album-list-item-meta">
+              <span class="album-list-item-meta-primary">{{ track_entity.track.title }}</span>
+              <span class="album-list-item-meta-secondary">{{ track_entity.track.artist }}</span>
+              <span class="album-list-item-meta-tertiary">{{ release_date }}</span>
+            </span>
           </a>
         </li>
       {% endfor %}
