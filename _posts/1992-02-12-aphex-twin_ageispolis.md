@@ -1,0 +1,21 @@
+---
+published: true
+published_date: 2017-09-17
+
+# SONG
+track:
+  title: Ageispolis
+  artist: Aphex Twin
+  appears_on:
+    album: Selected Ambient Works 85–92
+    discogs_release_ID: 32662
+  wikipedia_URL: //en.wikipedia.org/wiki/Selected_Ambient_Works_85–92
+  spotify_track_URI: spotify:track:7KRQoq9GeWeCm0ZAXg5XMb
+
+categories:
+  - Ambient
+  - IDM
+
+# ATTRIBUTION
+author: matt-grey
+---

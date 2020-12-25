@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+{% assign number_of_tracks = site.posts.size %} <br>
+{% assign number_of_artists = "" %} <br>
+{% assign number_of_authors = site.authors.size %} <br>
+{% assign number_of_genres = site.data.genres.size %} <br>
+{% assign number_of_years = site.data.years.size %} <br>
+
+{{ number_of_tracks }} tracks
+{{ number_of_artists }} artists
+{{ number_of_authors }} contributors
+{{ number_of_genres }} genres
+{{ number_of_years }} years
+
+<div class="col-md-6">
+  <h3>Artists and Tracks</h3>
+
+  {% assign posts_by_artist = site.posts | sort: 'track.artist' | group_by_exp:"post", "post.track.artist" %}
+  <ul>
+  {% for artist in posts_by_artist %}
+    {% assign this_artist = artist.name %}
+    <li>{{ artist.name }} - ({{ artist.size | pluralize: 'track', 'tracks' }})</li>
+
+    {% assign artist_tracks = artist.items | sort: 'track.title'%}
+    <ul>
+      {% for track_entity in artist_tracks %}
+        <li><a href="/tracks/{{ track_entity.slug }}">{{ track_entity.track.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+  </ul>
+</div>
+
+<div class="col-md-6">
+  <h3>Contributors</h3>
+  <ul>
+  {% for author in site.authors  %}
+    <li><a href="{{ author.slug }}">{{ author.title }}</a></li>
+  {% endfor %}
+  <ul>
+</div>
+
+<h2>Track Categorisations</h2>
+
+<div class="col-md-6">
+  <h3>Years</h3>
+  {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+  <ul>
+    {% for year in posts_by_year %}
+    <li>
+      <a href="{{ year.name }}">
+        <div>
+          {{ year.name }} ({{ year.size }} tracks)
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="col-md-6">
+  <h3>Genres</h3>
+  <ul>
+  {% for genre_entity in site.data.genres  %}
+  {% assign this_genre = genre_entity.title %}
+  <li>
+    <a class="link-tile" href="{{ genre_entity.title | slugify }}">
+     <span>{{ genre_entity.title }}</span>
+     <span>({{ site.categories[this_genre] | size }} tracks)</span>
+    </a>
+  </li>
+  {% endfor %}
+  <ul>
+</div>

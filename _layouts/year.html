@@ -1,0 +1,79 @@
+---
+layout: default
+layout_scope: year
+---
+
+{% assign this_year = page.year %}
+
+{% capture previous_year %}
+{{ page.year | minus:1 }}
+{% endcapture %}
+
+{% capture next_year %}
+{{ page.year | plus:1 }}
+{% endcapture %}
+
+{% assign tracks = site.posts | where: "date", this_year  %}
+
+<div class="year-layout">
+  <div class="year-header">
+    <div class="page-header">
+      <h3 class="page-header-breadcrumb-overline">
+        <a class="page-header-breadcrumb type-level-3 link-subtitle underlined-link-on-hover" href="/years">Year</a>
+      </h3>
+      <h1 class="type-level-jumbo-2 text-style-erode">{{ page.year }}</h1>
+
+      <a href="/years/{{ previous_year }}">{{ previous_year | prepend: '&larr;' }}</a>
+      <a href="/years/{{ next_year }}">{{ next_year | append: '&rarr;' }}</a>
+    </div>
+  </div>
+
+  <div class="year-list">
+    <ul class="i-grid">
+      <div class="i-grid-sizer"></div>
+
+      {% for track_entity in tracks %}
+
+        {% capture release_date %}
+        {% if track_entity.release_date_approximation == 'year' %}
+          {{ track_entity.date | date: '%Y' }}
+        {% elsif track_entity.release_date_approximation == 'month' %}
+          {{ track_entity.date | date: '%B %Y' }}
+        {% else %}
+          {{ track_entity.date | date: '%-d %B %Y' }}
+        {% endif %}
+        {% endcapture %}
+
+        <li class="i-grid-item" data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
+          <a class="album-list-item" href="/tracks/{{ track_entity.slug }} ">
+            <span class="track-artwork-container">
+              <span data-release-artwork class="track-artwork"></span>
+            </span>
+            <span class="album-list-item-meta">
+              <span class="album-list-item-meta-primary">{{ track_entity.track.title }}</span>
+              <span class="album-list-item-meta-secondary">{{ track_entity.track.artist }}</span>
+              <span class="album-list-item-meta-tertiary">{{ release_date }}</span>
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script>
+  {% include /javascript/artwork.js %}
+  artwork('background')
+
+  {% include /javascript/isotope.min.js %}
+
+  $('.i-grid').isotope({
+    itemSelector: '.i-grid-item',
+    layoutMode: 'fitRows',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.i-grid-sizer',
+      isFitWidth: true
+    }
+  });
+</script>

@@ -1,0 +1,46 @@
+.track-page {
+  .track-title {
+    font-size: 2.4rem;
+    margin-bottom: 4px;
+  }
+
+  .track-artist {
+    font-size: 1.8rem;
+    opacity: .3;
+  }
+
+  .track-release-artwork {
+    @extend .clearfix;
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+
+  .track-release-artwork__image {
+    z-index: 2;
+    width: 100%;
+    padding-top: 100%;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .track-release-artwork__image--shadow {
+    z-index: 1;
+    margin-top: -95%;
+    filter:
+      blur(30px)
+      grayscale(.6)
+      opacity(0.2)
+    ;
+  }
+
+  .track-submission-author {
+    background: black;
+  }
+
+  .track-submission-author__image {
+    width: 64px;
+  }
+}

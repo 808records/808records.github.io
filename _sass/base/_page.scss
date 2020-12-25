@@ -1,0 +1,58 @@
+::-moz-selection {
+    color: black;
+    background: white;
+}
+
+::selection {
+    color: black;
+    background: white;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: var(--color-background);
+}
+
+html,
+body {
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  border-width: var(--page-border-width);
+  border-style: solid;
+  border-color: var(--color-secondary);
+
+  // border-left: 40px solid var(--color-background);
+  // border-right: 40px solid var(--color-background);
+}
+
+/* When mouse is detected, ALL focused elements have outline removed. */
+body.using-mouse :focus {
+  outline: none;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+// .noise { 
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   z-index: -1;
+//   opacity: .8;
+//   pointer-events: none;
+//   filter: url(#noise);
+// }

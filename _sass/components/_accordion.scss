@@ -1,0 +1,70 @@
+.accordion {
+    border-radius: 3px;
+
+    .accordion-container,
+    .accordion-container:not(:target) {
+        display: block;
+        transition: margin 0.2s, padding 0.2s;
+
+        .accordion-title {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background-color: transparent;
+            border: 0;
+            color: red;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            
+            &:hover {
+                background: rgba(white, .03);
+            }
+        }
+
+        .accordion-title .icon-chevron {
+            width: 32px;
+            height: 32px;
+            transform: rotate(0deg);
+            transition: transform 0.2s;
+            fill: red;
+        }
+
+        .accordion-content {
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: 
+                max-height 0.2s,
+                opacity 0.2s,
+                visibility 0s linear 500ms
+            ;
+        }
+    }
+
+    .accordion-container.active,
+    .accordion-container:target {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding: 32px;
+        transition: margin 0.2s, padding 0.2s;
+        border: 1px solid red;
+        border-radius: 12px;
+
+        .accordion-title .icon-chevron {
+            transform: rotate(180deg);
+            transition: transform 0.2s;
+        }
+
+        .accordion-content {
+            max-height: 300px;
+            visibility: initial;
+            opacity: 1;
+            transition: 
+                max-height 0.2s,
+                opacity 0.2s,
+                visibility 0s linear
+            ;
+        }
+    }
+}

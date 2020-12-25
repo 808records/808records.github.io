@@ -1,0 +1,19 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body class="page">
+  <div class="noise"></div>
+  {% include scripts.html %}
+  {% include svg-filters.html %}
+  {% include header.html %}
+  <main class="page content">
+    {{ content }}
+  </main>
+  <div class="site-footer">
+    {% include footer.html %}
+  </div>
+</body>
+</html>

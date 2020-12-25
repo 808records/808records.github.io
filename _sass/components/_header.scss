@@ -1,0 +1,36 @@
+.header {
+    @extend .grid-container;
+
+    .header-logo {
+        @include grid-column(6);
+
+        @include grid-media(tablet) {
+          @include grid-column-from-to(1,6);
+        }
+  
+        @include grid-media(desktop) {
+          @include grid-column-from-to(1,6);
+        }
+    }
+
+    .header-navigation {
+        @include grid-column(6);
+
+        @include grid-media(tablet) {
+          @include grid-column-from-to(8,12);
+        }
+  
+        @include grid-media(desktop) {
+          @include grid-column-from-to(8,12);
+        }
+    }
+}
+
+.header { 
+  padding-top: var(--page-margin-horizontal);
+  padding-bottom: var(--page-margin-horizontal);
+}
+
+a.site-logo {
+  display: inline-block;
+}

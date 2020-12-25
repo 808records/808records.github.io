@@ -1,0 +1,38 @@
+.i-grid {
+  list-style: none;
+  margin-left: calc(#{var(--gutter)} / -1);
+  margin-right: calc(#{var(--gutter)} / -1);
+
+  @include grid-media(desktop) {
+    margin-left: calc(#{var(--gutter)} / -2);
+    margin-right: calc(#{var(--gutter)} / -2);
+  }
+}
+
+.i-grid-item,
+.i-grid-sizer {
+  width: 100%;
+
+  @include grid-media(tablet) {
+    width: 33.33333%;
+  }
+
+  @include grid-media(desktop) {
+    width: 25%;
+  }
+}
+
+.i-grid-item-fullwidth,
+.i-grid-sizer-fullwidth {
+  width: 100%;
+}
+
+.i-grid-item {
+  float: left;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.i-grid-item-animate {
+  transition: width 0.4s, height 0.4s;
+}

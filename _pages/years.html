@@ -1,0 +1,33 @@
+---
+layout: default
+title: Years
+permalink: /years/
+---
+
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+{% capture highest_year_count %}
+  {% assign posts_by_year = posts_by_year | sort: 'size' %}
+
+  {% for year in posts_by_year %}
+    {% if forloop.last == true %}
+      {{ year.size | append: '.0' }}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+
+{{ site.posts.size }} tracks in total
+
+<div>
+  {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+  {% for year in posts_by_year %}
+
+    {% assign number_of_tracks_in_year = year.size | times: 10 %}
+    {% capture year_percentage %}{{ number_of_tracks_in_year | divided_by: highest_year_count | times: 10 }}{% endcapture %}
+    <a href="{{ year.name }}">
+      <div style="position: relative; display: block; background: #626262; height: 32px; min-height: 50px; margin-bottom: 2px; width: {{ year_percentage | append: '%' }} ">
+        {{ year.name }} ({{ year.size }})
+      </div>
+    </a>
+  {% endfor %}
+</div>

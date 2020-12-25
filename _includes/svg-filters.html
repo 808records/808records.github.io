@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none"> 
+    <filter id="erode">
+        <feTurbulence id="turbulence" baseFrequency="0.011" numOctaves="3" result="noise" seed="0"/>
+        <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="1"/>
+
+        <!-- 
+        <feTurbulence type="fractalNoise" baseFrequency="0.00" numOctaves="1" result="warp"></feTurbulence>
+        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+        -->
+    </filter>
+
+    <filter id="noise" x="0vw" y="0vh" width="100vw" height="100vh">
+        <feFlood flood-color="#808080" result="neutral-gray" />      
+        <feTurbulence in="neutral-gray" type="fractalNoise" baseFrequency="0.8" numOctaves="10" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix in="noise" type="saturate" values="0" result="destaturatedNoise"></feColorMatrix>
+        <feComponentTransfer in="desaturatedNoise" result="theNoise">
+        <feFuncA type="table" tableValues="0 0 0.2 0"></feFuncA>
+        </feComponentTransfer>
+        <feBlend in="SourceGraphic" in2="theNoise" mode="soft-light" result="noisy-image"/>      
+    </filter>
+
+    <filter id="softGlow" height="300%" width="300%" x="-75%" y="-75%">
+        <!-- Thicken out the original shape -->
+        <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="thicken" />
+
+        <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+        <feGaussianBlur in="thicken" stdDeviation="10" result="blurred" />
+
+        <!-- Change the colour -->
+        <feFlood flood-color="rgba(254,65,123,0.8)" result="glowColor" />
+
+        <!-- Color in the glows -->
+        <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+        <!--	Layer the effects together -->
+        <feMerge>
+        <feMergeNode in="softGlow_colored"/>
+        <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+
+    </filter>
+</svg>

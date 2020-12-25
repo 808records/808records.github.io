@@ -1,0 +1,151 @@
+---
+layout: default
+---
+<div class="track-page" data-discogs_release_id="{{ page.track.appears_on.discogs_release_ID }}">
+  <div class="">
+    <div class="track-release-artwork">
+      <div class="track-release-artwork__image" data-release-artwork></div>
+      <div class="track-release-artwork__image track-release-artwork__image--shadow" data-release-artwork></div>
+    </div>
+  </div>
+
+  <div class="track-layout">
+    <div class="year-header">
+      <div class="page-header">
+        <button onclick="history.back(-1)">&larr;</button>
+
+        <h1 class="type-level-2 text-style-erode">{{ page.track.title }}</h1>
+        <h2 class="track-artist"><a href="/artists#{{ page.track.artist | slugify | remove: '-' }}">{{ page.track.artist }}</a></h2>
+      </div>
+    </div>
+
+    <dl>
+      {% if page.track.appears_on %}
+        {% if page.track.appears_on.album %}
+          <dt>From the album</dt>
+          <dd>{{ page.track.appears_on.album }}</dd>
+
+        {% elsif page.track.appears_on.ep %}
+          <dt>From the EP</dt>
+          <dd>{{ page.track.appears_on.ep }}</dd>
+
+        {% elsif page.track.appears_on.single %}
+          <dt>From the single</dt>
+          <dd>{{ page.track.appears_on.single }}</dd>
+
+        {% elsif page.track.appears_on.compilation %}
+          <dt>From the compilation</dt>
+          <dd>{{ page.track.appears_on.compilation }}</dd>
+
+        {% elsif page.track.appears_on.soundtrack %}
+          <dt>From the soundtrack</dt>
+          <dd>{{ page.track.appears_on.soundtrack }}</dd>
+
+        {% elsif page.track.appears_on.mixtape %}
+          <dt>From the mixtape</dt>
+          <dd>{{ page.track.appears_on.mixtape }}</dd>
+
+        {% endif %}
+      {% endif %}
+
+      {% capture release_date %}
+        {% if page.release_date_approximation == 'year' %}
+        {% elsif page.release_date_approximation == 'month' %}
+          {{ page.date | date: '%B' }}
+        {% else %}
+          {{ page.date | date: '%-d %B' }}
+        {% endif %}
+      {% endcapture %}
+
+      <dt>Released</dt>
+      <dd>{{ release_date }}<a href="/years/{{ page.date | date: '%Y' }}">{{ page.date | date: '%Y' }}</a></dd>
+    </dl>
+
+    <h3>Genre{% if page.categories.size > 1 %}s{% endif %}</h3>
+    <ul>
+      {% for genre in page.categories %}
+        <li><a href="/genres/{{ genre | slugify }}">{{ genre }}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% if page.track.spotify_track_URI %}
+      <iframe class="spotify-embed"
+              src="//open.spotify.com/embed?uri={{ page.track.spotify_track_URI }}"
+              width="300"
+              height="80"
+              frameborder="0"
+              allowtransparency="true"
+              seamless>
+      </iframe>
+
+    {% elsif page.track.bandcamp %}
+      <iframe class="youtube_embed"
+              width="300"
+              height="120"
+              frameborder="0"
+              allowtransparency="true"
+              src="https://bandcamp.com/EmbeddedPlayer/album={{ page.track.bandcamp.album_ID }}/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/track={{ page.track.bandcamp.track_ID }}/transparent=true/"
+              seamless>
+      </iframe>
+
+    {% elsif page.track.soundcloud_track_ID %}
+      {{ prevent_player_interrupt }}
+      <iframe class="soundcloud-embed"
+              width="300"
+              height="120"
+              scrolling="no"
+              frameborder="0"
+              allowtransparency="true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.track.soundcloud_track_ID }}&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false"
+              seamless>
+      </iframe>
+
+    {% elsif page.track.tidal_track_ID %}
+      {{ prevent_player_interrupt }}
+      <div class="tidal-embed"
+            data-type="t"
+            data-id="7597267">
+      </div>
+      <script src="https://embed.tidal.com/tidal-embed.js"></script>
+
+
+    {% elsif page.track.youtube_video_ID %}
+      {{ prevent_player_interrupt }}
+      <iframe class="youtube-embed"
+              width="300"
+              height="120"
+              src="https://www.youtube.com/embed/{{ page.track.youtube_video_ID }}"
+              frameborder="0"
+              seamless>
+      </iframe>
+    {% endif %}
+
+    <div class="source-links">
+      {% if page.additional_info %}
+        {{ page.additional_info | markdownify }}
+      {% endif %}
+
+      <h3>Links</h3>
+      {% if page.track.wikipedia_URL %}
+        <a href="{{ page.track.wikipedia_URL }}" target="_blank">Wikipedia entry</a>
+      {% elsif page.track.source_URL %}
+        <a href="{{ page.track.source_URL }}" target="_blank">Source</a>
+      {% endif %}
+      {% if page.track.appears_on.discogs_release_ID %}
+        <a href="//discogs.com/release/{{ page.track.appears_on.discogs_release_ID }}" target="_blank">Discogs release</a>
+      {% endif %}
+    </div>
+
+    <div>
+      <h4 class="subtitle-label">Submitted by</h4>
+      {% include components/author-card.html card_author=page.author %}
+
+      <time>{{ page.published_date | date: "%-d %B %Y"}}</time>
+    </div>
+  </div>
+</div>
+
+<script>
+  {% include /javascript/artwork.js %}
+  artwork('background')
+</script>

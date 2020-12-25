@@ -1,0 +1,28 @@
+---
+layout: default
+permalink: /
+---
+
+<div class="home-layout">
+
+  <div class="home-intro">
+    <h1 class="home-title type-level-jumbo text-style-erode">dig through the history of the most iconic drum machine</h1>
+    <p class="type-level-3">the biggest online archive of tracks featuring the ubiquitous and genre defining Roland TR-808, from 1980 onwards</p>
+  </div>
+
+  <div class="home-links">
+    {% assign genres = site.categories %}
+    {% assign years = site.data.years %}
+    {% assign artists = site.posts | group_by_exp:"post", "post.track.artist" %}
+    {% assign tracks = site.posts %}
+
+    <h3 class="type-level-4">Explore</h3>
+    <ul class="navigation-list underlined-link-on-hover">
+      <li><a href="/genres">{{ genres | size }} genres &rarr;</a></li>
+      <li><a href="/years">{{ years | size }} years &rarr;</a></li>
+      <li><a href="/artists">{{ artists | size }} artists &rarr;</a></li>
+      <li><a href="/tracks">{{ tracks | size }} tracks &rarr;</a></li>
+    </ul>
+  </div>
+  
+</div>

@@ -1,0 +1,43 @@
+---
+layout: default
+title: Tracks
+permalink: /tracks/
+pagination:
+  enabled: true
+  sort_field: 'published_date'
+---
+
+<ul class="track-list">
+  {% for track_entity in paginator.posts %}
+    <li data-discogs_release_id="{{ track_entity.track.appears_on.discogs_release_ID }}">
+      <a href="/tracks/{{ track_entity.slug }}">
+        <span data-release-artwork class="track-artwork"></span>
+        <h3>{{ track_entity.track.title }}</h3>
+        <span>{{ track_entity.track.artist }}</span>
+        <span class="post-meta">
+          Posted {{ track_entity.published_date | date: "%b %-d, %Y" }}
+          released: {{ track_entity.date | date: "%b %-d, %Y" }}
+        </span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+  {% if paginator.previous_page %}
+  <li class="previous">
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | remove: 'index.html'  }}">&larr; Newer tracks</a>
+  </li>
+  {% endif %} {% if paginator.next_page %}
+  <li class="next">
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' | remove: 'index.html' }}">Older tracks &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
+
+<script>
+  {% include /javascript/artwork.js %}
+  artwork('background')
+</script>

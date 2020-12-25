@@ -1,0 +1,56 @@
+---
+layout: default
+layout_scope: genre
+---
+
+<div class="genre-layout">
+  
+  <div class="genre-header">
+    <div class="page-header">
+      <h3 class="page-header-breadcrumb-overline">
+        <a class="page-header-breadcrumb type-level-3 link-subtitle underlined-link-on-hover" href="/genres">Genre</a>
+      </h3>
+      <h1 class="page-header-title type-level-jumbo-2 text-style-erode">{% if page.autopages %}{{page.autopages.display_name}}{% endif %}</h1>
+    </div>
+  </div>
+
+  {% if page.autopages %}{{page.autopages.display_name}}{% endif %}</b> Page {{page.pagination_info.curr_page}} of {{page.pagination_info.total_pages}}
+
+  <div class="genre-list">
+    <ul class="i-grid">
+      <div class="i-grid-sizer"></div>
+  
+      {% for post in paginator.posts %}
+        <li class="i-grid-item" data-discogs_release_id="{{ post.track.appears_on.discogs_release_ID }}">
+          <a class="album-list-item" href="{{ post.url }}">
+            <span class="track-artwork-container">
+              <span data-release-artwork class="track-artwork"></span>
+            </span>
+            <span class="album-list-item-meta">
+              <span class="album-list-item-meta-primary">{{ post.track.title }}</span>
+              <span class="album-list-item-meta-secondary">{{ post.track.artist }}</span>
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% include components/pagination.html trail=true %}
+</div>
+
+
+<script>
+  {% include /javascript/artwork.js %}
+  artwork('background')
+
+  {% include /javascript/isotope.min.js %}
+  $('.i-grid').isotope({
+    itemSelector: '.i-grid-item',
+    layoutMode: 'fitRows',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.i-grid-sizer',
+      isFitWidth: true
+    }
+  });
+</script>

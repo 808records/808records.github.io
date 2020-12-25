@@ -1,0 +1,12 @@
+.artists-layout {
+    @extend .grid-container;
+
+    .artists-header {
+        @include grid-column(12);
+    }
+
+    .artists-list {
+        @include grid-column(12);
+    }
+    
+}

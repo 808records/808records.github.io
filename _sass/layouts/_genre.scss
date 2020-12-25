@@ -1,0 +1,12 @@
+.genre-layout {
+    @extend .grid-container;
+
+    .genre-header {
+        @include grid-column(12);
+    }
+
+    .genre-list {
+        @include grid-column(12);
+    }
+
+}
