@@ -10,7 +10,7 @@ track:
     album: On The Rise
     discogs_release_ID: 781956
   wikipedia_URL: //en.wikipedia.org/wiki/Just_Be_Good_to_Me
-  spotify_track_URI: spotify:track:5UiU9dHNWJm5LW957O8RZW
+  spotify_track_URI: spotify:track:1482bMc9Tn0uQxsJqV7eSP
 
 categories:
   - Post-disco

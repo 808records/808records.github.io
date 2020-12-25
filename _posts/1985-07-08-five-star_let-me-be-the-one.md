@@ -8,15 +8,14 @@ track:
   artist: Five Star
   appears_on:
     album: Luxury Of Life
-    discogs_release_ID: 1809617
+    discogs_release_ID: 12686159
   wikipedia_URL: //en.wikipedia.org/wiki/Let_Me_Be_the_One_(Five_Star_song)
   spotify_track_URI: spotify:track:1Ai0vdqZthkP9NeUEEcjgu
 
 categories:
-  - Synth-pop
+  - New jack swing
   - Pop
-  - Dance-pop
-  - Funk
+  - Synth-pop
 
 # ATTRIBUTION
 author: alex-winter

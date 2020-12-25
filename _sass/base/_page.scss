@@ -28,6 +28,11 @@ body {
   // border-right: 40px solid var(--color-background);
 }
 
+/* When mouse is detected, ALL focused elements have outline removed. */
+body.using-mouse :focus {
+  outline: none;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }

@@ -15,18 +15,21 @@ published: true
     </div>
   </div>
 
-  <div class="artists-list">
+  <div class="accordion artists-list">
 
     {% for artist in posts_by_artist %}
     {% assign this_artist = artist.name %}
-    <div class="accordion-container" id="{{ artist.name | slugify | remove: '-' }}">
-      <button class="accordion-title">
+    <div class="accordion-container" id="{{ artist.name | slugify | remove: '-' }}" aria-controls="{{ artist.name | slugify | remove: '-' }}-content">
+      <button class="accordion-title" aria-expanded="true">
+        <svg class="icon-chevron" aria-hidden="true">
+          <use xlink:href="#chevron"></use>
+        </svg>
         <span class="type-level-3">{{ artist.name }}</span>
         <span>{{ artist.size | pluralize: 'track', 'tracks' }}</span>
       </button>
 
       {% assign artist_tracks = artist.items | sort: 'track.title'%}
-      <div class="accordion-content">
+      <div class="accordion-content" aria-labelledby="{{ artist.name | slugify | remove: '-' }}-content">
         {% for track_entity in artist_tracks %}
           <ul>
             <li><a class="underlined-link-on-hover" href="/tracks/{{ track_entity.slug }}">{{ track_entity.track.title }}</a></li>

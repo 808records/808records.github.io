@@ -1,0 +1,6 @@
+<defs>
+    <symbol id="chevron" viewBox="0 0 32 32">
+        <title>Chevron</title>
+        <path class="icon-chevron" fill-rule="nonzero" d="M2.5 11.5L16 25l13.5-13.5L26 8 16 18 6 8z"/>
+    </symbol>
+</defs>

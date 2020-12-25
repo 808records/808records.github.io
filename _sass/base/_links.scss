@@ -16,7 +16,7 @@ a.underlined-link-on-hover,
 .format.underlined-link-on-hover {
   text-decoration: none;
   color: var(--color-cta);
-  border-bottom: rem(1px) solid;
+  border-bottom: rem(2px) solid;
   border-bottom-color: transparent;
   
   &:hover { border-bottom-color: var(--color-cta); }
@@ -27,16 +27,19 @@ a.plain-link,
 .format.plain-link {
   text-decoration: none;
   color: var(--color-cta);
-  border-bottom: rem(1px) solid;
+  border-bottom: rem(2px) solid;
   border-bottom-color: transparent;
 }
 
 
-h1, h2, h3, h4 { 
-  a:hover {
-    border-bottom-width: rem(2px);
-  }
-}
+// h1, 
+// h2, 
+// h3, 
+// h4 { 
+//   a:hover {
+//     border-bottom-width: rem(2px);
+//   }
+// }
 
 .link-subtitle {
   text-decoration: none;

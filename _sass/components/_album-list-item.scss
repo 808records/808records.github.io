@@ -22,8 +22,6 @@ padding: var(--gutter);
 
     &:hover, 
     &:focus {
-        outline: 0;
-        
         .track-artwork {
             background-blend-mode: luminosity;
         }
@@ -31,13 +29,12 @@ padding: var(--gutter);
         &:before {
             position: absolute;
             content: '';
-            // border: 2px solid var(--color-cta);
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             border-radius: 12px;
-            background: rgba(var(--color-action), .08);
+            background: rgba(white, .03);
             z-index: -1;
         }
     }
