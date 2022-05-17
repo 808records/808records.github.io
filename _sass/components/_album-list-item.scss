@@ -33,8 +33,8 @@ padding: var(--gutter);
             right: 0;
             top: 0;
             bottom: 0;
-            border-radius: 12px;
-            background: rgba(white, .03);
+            border-radius: var(--component-border-radius);
+            background: var(--color-component-hover);
             z-index: -1;
         }
     }

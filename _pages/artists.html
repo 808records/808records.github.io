@@ -24,17 +24,17 @@ published: true
         <svg class="icon-chevron" aria-hidden="true">
           <use xlink:href="#chevron"></use>
         </svg>
-        <span class="type-level-3">{{ artist.name }}</span>
-        <span>{{ artist.size | pluralize: 'track', 'tracks' }}</span>
+        <span class="type-level-2">{{ artist.name }}</span>
+        <span class="label-count label-count--right">{{ artist.size}}</span>
       </button>
 
       {% assign artist_tracks = artist.items | sort: 'track.title'%}
       <div class="accordion-content" aria-labelledby="{{ artist.name | slugify | remove: '-' }}-content">
+        <ul class="accordion-track-list">
         {% for track_entity in artist_tracks %}
-          <ul>
-            <li><a class="underlined-link-on-hover" href="/tracks/{{ track_entity.slug }}">{{ track_entity.track.title }}</a></li>
-          </ul>
+          <li class="accordion-track-list-item"><a class="accordion-track-list-item-link type-level-3" href="/tracks/{{ track_entity.slug }}">{{ track_entity.track.title }}</a></li>
         {% endfor %}
+        </ul>
       </div>
     </div>
     {% endfor %}

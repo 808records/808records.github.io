@@ -43,7 +43,6 @@ port: 8080
 authors:
   - name: Matt Grey
     url: 'himatt.com'
-  - name: Alex Winter
 
 social:
   twitter_username: find808

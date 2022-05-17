@@ -4,6 +4,7 @@ layout_scope: year
 ---
 
 {% assign this_year = page.year %}
+{% assign latest_year = site.time | date: '%Y' %}
 
 {% capture previous_year %}
 {{ page.year | minus:1 }}
@@ -23,8 +24,13 @@ layout_scope: year
       </h3>
       <h1 class="type-level-jumbo-2 text-style-erode">{{ page.year }}</h1>
 
+      {% if page.year != "1981" %}
       <a href="/years/{{ previous_year }}">{{ previous_year | prepend: '&larr;' }}</a>
+      {% endif %}
+      
+      {% if page.year != latest_year %}
       <a href="/years/{{ next_year }}">{{ next_year | append: '&rarr;' }}</a>
+      {% endif %}
     </div>
   </div>
 

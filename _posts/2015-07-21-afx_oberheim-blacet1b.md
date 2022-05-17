@@ -18,7 +18,7 @@ categories:
   - Techno
 
 additional_info: |
-  AFX is one of Richard D. James' (Aphex Twin) many monikers.
+  AFX is one of Richard D. James' ([Aphex Twin](/artists/#aphextwin)) many monikers.
 
 # ATTRIBUTION
 author: matt-grey

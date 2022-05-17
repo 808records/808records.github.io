@@ -72,14 +72,18 @@
   --color-line: rgba(var(--color-primary), var(--color-rgb-opacity-tint-mid));
   --color-line-subtle: rgba(var(--color-primary), var(--color-rgb-opacity-tint-light));
   --color-text: rgba(var(--color-primary),.95);
-  --color-form-background: rgba(var(--color-primary),.95);
-  --color-text-inverted: rgba(var(--color-secondary),.95);
+  --color-form-background: rgba(var(--color-primary), .95);
+  --color-text-inverted: rgba(var(--color-secondary), .95);
 
   --color-cta: rgb(var(--color-action));
+
+  --color-component-hover: rgba(255, 255, 255, .03);
 
   --color-rgb-opacity-tint-light: .1;
   --color-rgb-opacity-tint-mid: .6;
   --color-rgb-opacity-tint-dark: .85;
+
+  --component-border-radius: 12px;
 }
 
 @include grid-media(tablet) {
